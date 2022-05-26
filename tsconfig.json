@@ -18,6 +18,7 @@
     "paths": {
       "@/components/*": ["core/components/*"],
       "@/hooks/*": ["core/hooks/*"],
+      "@/interfaces/*": ["core/interfaces/*"],
       "@/layouts/*": ["core/layouts/*"],
       "@/providers/*": ["core/providers/*"],
       "@/repositories/*": ["core/repositories/*"],

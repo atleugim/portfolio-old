@@ -1,9 +1,6 @@
-interface Props {
-  children: React.ReactNode;
-  className?: string;
-}
+import { Component } from "@/utils/types";
 
-const Wrapper = ({ children, className = "" }: Props) => {
+const Wrapper = ({ children, className = "" }: Component) => {
   return (
     <div className="flex justify-center w-full h-full">
       <div

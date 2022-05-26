@@ -1,41 +1,34 @@
+import { Component } from "@/utils/types";
 import { NO_IMAGE_AVAILABLE } from "@/utils/vars";
 import { useState } from "react";
 
-interface Props {
+interface Image extends Component {
   src: string;
   fallbackSrc?: string;
   alt: string;
-  className?: string;
   width?: string;
   height?: string;
+  loading?: "lazy" | "eager";
   decoding?: "async" | "auto" | "sync";
 }
 
-const Img = ({
-  src,
-  fallbackSrc = NO_IMAGE_AVAILABLE,
-  alt = "",
-  className = "",
-  width = "100%",
-  height = "100%",
-  decoding = "async",
-}: Props) => {
-  const [source, setSource] = useState<string>(src);
+const Img = (image: Image) => {
+  const [source, setSource] = useState<string>(image.src);
 
   const onError = () => {
-    setSource(fallbackSrc);
+    setSource(image.fallbackSrc ?? NO_IMAGE_AVAILABLE);
   };
 
   return (
     <img
-      width={width}
-      height={height}
-      className={className}
-      loading="lazy"
-      decoding={decoding}
-      src={source || fallbackSrc}
+      width={image.width}
+      height={image.height}
+      className={image.className}
+      loading={image.loading ?? "lazy"}
+      decoding={image.decoding ?? "async"}
+      src={source || image.fallbackSrc}
       onError={onError}
-      alt={alt}
+      alt={image.alt}
     />
   );
 };
