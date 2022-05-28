@@ -8,9 +8,16 @@ const Project = (project: Project) => {
       <div className="flex flex-col items-start w-full h-full p-5 space-y-4 md:w-8/12">
         <h2 className="text-4xl font-extrabold">{project.name}</h2>
         <p className="font-light">{project.description}</p>
-        {project.technologies.map((technology) => (
-          <span key={technology.id}>{technology.name}</span>
-        ))}
+        <div className="flex w-full space-x-4">
+          {project.technologies.map((technology) => (
+            <i
+              key={technology.id}
+              aria-label={technology.name}
+              className={`${technology.icon} text-2xl`}
+              title={technology.name}
+            />
+          ))}
+        </div>
         <Button
           className="duration-300 bg-glass-light dark:bg-glass-dark hover:bg-light dark:hover:bg-primary"
           text="View project"
@@ -19,7 +26,7 @@ const Project = (project: Project) => {
           target="_blank"
         />
       </div>
-      <picture className="w-full h-full p-4 scale-150 sm:-translate-y-5 md:translate-y-0 lg:scale-125 md:translate-x-8 max-h-40 md:max-h-screen md:w-4/12 md:p-0">
+      <picture className="w-full h-full p-4 sm:-translate-y-5 md:translate-y-0 sm:scale-125 md:translate-x-8 max-h-40 md:max-h-screen md:w-4/12 md:p-0">
         <Img
           src={project.image}
           alt={project.name}

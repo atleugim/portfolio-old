@@ -15,6 +15,10 @@ const Document = () => {
           name="keywords"
           content="developer, development, desarrollo, programacion, desarrollador, react, frontend, web, web developer, flutter, dart, mobile developer, desarrollador movil, Flutter developer, app developer, android, ios"
         />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        />
         {/* <link rel="canonical" href="https://startupslab.co/" /> */}
       </Head>
       <body className={`${process.env.IS_DEBUG ? "debug-screens" : ""} dark`}>

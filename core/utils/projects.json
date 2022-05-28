@@ -1,0 +1,102 @@
+[
+  {
+    "name": "StartupsLab EDU",
+    "description": "A platform to buy and view online courses on digital marketing focused on small entrepreneurs.",
+    "image": "/assets/images/projects/edu.png",
+    "link": "https://startupslab.co/",
+    "technologies": [
+      {
+        "id": "reactjs",
+        "name": "React.js",
+        "icon": "devicon-react-original"
+      },
+      {
+        "id": "nextjs",
+        "name": "Next.js",
+        "icon": "devicon-nextjs-original"
+      },
+      {
+        "id": "tailwind",
+        "name": "Tailwind CSS",
+        "icon": "devicon-tailwindcss-plain"
+      }
+    ]
+  },
+  {
+    "name": "Neutro",
+    "description": "A real estate project builder, showcase and sales contact information.",
+    "image": "/assets/images/projects/neutro.png",
+    "link": "https://wearered.co/neutro",
+    "technologies": [
+      {
+        "id": "reactjs",
+        "name": "React.js",
+        "icon": "devicon-react-original"
+      },
+      {
+        "id": "nextjs",
+        "name": "Next.js",
+        "icon": "devicon-nextjs-original"
+      },
+      {
+        "id": "tailwind",
+        "name": "Tailwind CSS",
+        "icon": "devicon-tailwindcss-plain"
+      }
+    ]
+  },
+  {
+    "name": "Ipapi.co package",
+    "description": "A ipapi.co wrapper for flutter, you can find the location, IP address, timezone, geolocation and other metadata.",
+    "image": "/assets/images/projects/ipapico-flutter.png",
+    "link": "https://pub.dev/packages/ipapico_flutter",
+    "technologies": [
+      {
+        "id": "dart",
+        "name": "Dart",
+        "icon": "devicon-dart-plain"
+      }
+    ]
+  },
+  {
+    "name": "Monoschinos API",
+    "description": "Anime content api, built using web scrapping techniques on the original website.",
+    "image": "/assets/images/projects/monoschinos-api.png",
+    "link": "https://github.com/atleugim/monoschinos-api",
+    "technologies": [
+      {
+        "id": "nodejs",
+        "name": "Node.js",
+        "icon": "devicon-nodejs-plain"
+      },
+      {
+        "id": "expressjs",
+        "name": "Express.js",
+        "icon": "devicon-express-original"
+      }
+    ]
+  },
+  {
+    "name": "Fembed Source Scrapper API",
+    "description": "API built to get original video sources from fembed.com via web scrapping",
+    "image": "/assets/images/projects/fembedsourcescraper-api.png",
+    "link": "https://github.com/atleugim/Fembed-Source-Scrapper",
+    "technologies": [
+      {
+        "id": "nodejs",
+        "name": "Node.js",
+        "icon": "devicon-nodejs-plain"
+      },
+      {
+        "id": "expressjs",
+        "name": "Express.js",
+        "icon": "devicon-express-original"
+      },
+      {
+        "id": "puppeteer",
+        "name": "Puppeteer",
+        "icon": "devicon-chrome-plain"
+      }
+    ]
+  }
+]

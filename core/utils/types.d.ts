@@ -44,16 +44,14 @@ export interface IconWithLink extends Icon {
   link: string;
 }
 
-interface Technology {
-  id: string;
-  name: string;
-  icon: Icon;
-}
-
 export interface Project {
   name: string;
   description: string;
   image: string;
   link: string;
-  technologies: Technology[];
+  technologies: {
+    id: string;
+    name: string;
+    icon: string;
+  }[];
 }
