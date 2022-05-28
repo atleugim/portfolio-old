@@ -15,7 +15,7 @@ module.exports = {
           DEFAULT: "#E7EDF0",
         },
         secondary: {
-          DEFAULT: "#FC8A9D",
+          DEFAULT: "#F4677F",
         },
       },
       backgroundImage: {

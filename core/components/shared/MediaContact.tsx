@@ -11,7 +11,7 @@ import Twitter from "./icons/Twitter";
 
 const MediaContact = () => {
   return (
-    <div className="fixed bottom-0 flex justify-between px-2 md:px-5 animate-slideInUp">
+    <div className="fixed bottom-0 flex justify-between px-4 animate-slideInUp">
       <div className="flex flex-col items-center justify-end space-y-5 dark:text-light text-primary-dark text-opacity-80">
         <Mail size="1.3em" link={EMAIL_URL} />
         <GitHub size="1.3em" link={GITHUB_URL} />

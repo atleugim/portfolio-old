@@ -43,6 +43,7 @@ const Welcome = () => {
           <Img
             src="/assets/images/me.png"
             alt="Miguel Vega"
+            loading="eager"
             className="object-contain w-full h-full rounded-full animate-fadeIn"
           />
         </picture>

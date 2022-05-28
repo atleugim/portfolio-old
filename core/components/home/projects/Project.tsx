@@ -12,7 +12,8 @@ const Project = (project: Project) => {
           {project.technologies.map((technology) => (
             <i
               key={technology.id}
-              aria-label={technology.name}
+              role="img"
+              aria-label="technology-icon"
               className={`${technology.icon} text-2xl`}
               title={technology.name}
             />
