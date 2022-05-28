@@ -11,6 +11,7 @@ const ToggleDarkMode = ({ initialState = true }) => {
     <button
       className="p-2 duration-300 transform rounded-full aspect-square dark:bg-light dark:bg-opacity-10 bg-primary bg-opacity-10 hover:rotate-90 backdrop-blur-md"
       onClick={toggle}
+      aria-label="Toggle dark mode"
     >
       <CurrentModeIcon isDarkMode={isDark} />
     </button>

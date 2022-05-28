@@ -6,6 +6,7 @@ const Mail = ({ size = "1em", className = "", link }: IconWithLink) => (
     target="_blank"
     rel="noreferrer"
     className="duration-300 transform hover:scale-110 hover:-translate-y-1 hover:text-secondary"
+    aria-label="Mail Link"
   >
     <svg
       stroke="currentColor"

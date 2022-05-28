@@ -13,7 +13,7 @@ const Projects = () => {
             key={index}
             name="Project name goes here"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            image="https://agencia-assets.s3.us-east-2.amazonaws.com/public/images/clients/webdev/new/neutro.png"
+            image="/assets/images/neutro.png"
             link="https://startupslab.co/"
             technologies={[]}
           />

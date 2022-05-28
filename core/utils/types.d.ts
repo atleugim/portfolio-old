@@ -23,6 +23,18 @@ export interface Button extends Component {
   isLoading?: boolean
 }
 
+interface Img extends Component {
+  src: string;
+  fallbackSrc?: string;
+  children?: React.ReactNode;
+  alt: string;
+  width?: string | number;
+  height?: string | number;
+  className?: string;
+  loading?: "lazy" | "eager";
+  decoding?: "async" | "auto" | "sync";
+}
+
 export interface Icon {
   size?: string;
   className?: string;

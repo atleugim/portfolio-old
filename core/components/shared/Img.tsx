@@ -1,18 +1,8 @@
+import { Img } from "@/utils/types";
 import { NO_IMAGE_AVAILABLE } from "@/utils/vars";
 import { useState } from "react";
 
-interface Image {
-  src: string;
-  fallbackSrc?: string;
-  alt: string;
-  width?: string;
-  height?: string;
-  className?: string;
-  loading?: "lazy" | "eager";
-  decoding?: "async" | "auto" | "sync";
-}
-
-const Img = (image: Image) => {
+const Img = (image: Img) => {
   const [source, setSource] = useState<string>(image.src);
 
   const onError = () => {

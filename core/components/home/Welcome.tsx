@@ -39,11 +39,11 @@ const Welcome = () => {
         </p>
       </div>
       <div className="flex items-center justify-center w-full h-full col-span-2 max-h-80 md:w-4/12">
-        <picture className="h-full">
+        <picture className="w-full h-full">
           <Img
             src="/assets/images/me.png"
             alt="Miguel Vega"
-            className="object-contain h-full rounded-full animate-fadeIn"
+            className="object-contain w-full h-full rounded-full animate-fadeIn"
           />
         </picture>
       </div>
