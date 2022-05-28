@@ -1,13 +1,13 @@
-import { Component } from "@/utils/types";
 import { NO_IMAGE_AVAILABLE } from "@/utils/vars";
 import { useState } from "react";
 
-interface Image extends Component {
+interface Image {
   src: string;
   fallbackSrc?: string;
   alt: string;
   width?: string;
   height?: string;
+  className?: string;
   loading?: "lazy" | "eager";
   decoding?: "async" | "auto" | "sync";
 }
