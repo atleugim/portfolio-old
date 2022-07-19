@@ -1,6 +1,6 @@
 [
   {
-    "name": "StartupsLab EDU",
+    "name": "StartupsLab",
     "description": "A platform to buy and view online courses on digital marketing focused on small entrepreneurs.",
     "image": "/assets/images/projects/edu.png",
     "link": "https://startupslab.co/",
@@ -59,6 +59,42 @@
     ]
   },
   {
+    "name": "Take2 app",
+    "description": "Take2 connects you with brands and ventures through experiences and products that are best enjoyed in company.",
+    "image": "/assets/images/projects/take2_app.png",
+    "link": "https://play.google.com/store/apps/details?id=co.startupslab.take2",
+    "technologies": [
+      {
+        "id": "dart",
+        "name": "Dart",
+        "icon": "devicon-dart-plain"
+      },
+      {
+        "id": "flutter",
+        "name": "Flutter",
+        "icon": "devicon-flutter-plain"
+      }
+    ]
+  },
+  {
+    "name": "iCards app",
+    "description": "In this app you will be able to listen to the sounds and pronunciation in English of all the content of your Flash cards, while your children have fun.",
+    "image": "/assets/images/projects/icards_app.png",
+    "link": "https://play.google.com/store/apps/details?id=co.startupslab.icard",
+    "technologies": [
+      {
+        "id": "dart",
+        "name": "Dart",
+        "icon": "devicon-dart-plain"
+      },
+      {
+        "id": "flutter",
+        "name": "Flutter",
+        "icon": "devicon-flutter-plain"
+      }
+    ]
+  },
+  {
     "name": "Monoschinos API",
     "description": "Anime content api, built using web scrapping techniques on the original website.",
     "image": "/assets/images/projects/monoschinos-api.png",
@@ -73,6 +109,11 @@
         "id": "expressjs",
         "name": "Express.js",
         "icon": "devicon-express-original"
+      },
+      {
+        "id": "puppeteer",
+        "name": "Puppeteer",
+        "icon": "devicon-chrome-plain"
       }
     ]
   },
