@@ -1,9 +1,8 @@
 import MediaContact from "@/components/shared/MediaContact";
-import Navbar from "@/components/shared/navbar/Navbar";
+import Navbar from "@/components/shared/Navbar/Navbar";
 import Sidebar from "@/components/shared/sidebar/Sidebar";
 import Wrapper from "@/components/shared/Wrapper";
 import { Component } from "@/utils/types";
-import React from "react";
 
 const MainLayout = ({ children, className = "" }: Component) => {
   return (

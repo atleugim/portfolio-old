@@ -1,7 +1,7 @@
 import useSidebar from "@/hooks/useSidebar";
 import { Routes } from "@/utils/routes";
 import GlassContainer from "../GlassContainer";
-import NavbarLink from "../navbar/NavLink";
+import NavbarLink from "../Navbar/NavLink";
 import CloseSidebar from "./CloseSidebar";
 
 const Sidebar = () => {
