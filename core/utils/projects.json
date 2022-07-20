@@ -119,7 +119,7 @@
   },
   {
     "name": "Fembed Source Scrapper API",
-    "description": "API built to get original video sources from fembed.com via web scrapping",
+    "description": "API built to get original video sources from fembed.com via web scrapping.",
     "image": "/assets/images/projects/fembedsourcescraper-api.png",
     "link": "https://github.com/atleugim/Fembed-Source-Scrapper",
     "technologies": [
