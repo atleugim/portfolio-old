@@ -44,6 +44,26 @@ export interface Icon {
   className?: string;
 }
 
+export interface InputType {
+  id: string;
+  type?: "text" | "password" | "email" | "number" | "tel" | "url" | "search";
+  name?: string;
+  defaultValue?: string | number;
+  placeholder?: string;
+  className?: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  disabled?: boolean;
+  required?: boolean;
+  readOnly?: boolean;
+  label?: string;
+  autoCapitalize?: "none" | "sentences" | "words" | "characters";
+}
+
+export interface TextAreaType extends InputType {
+  onChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  rows?: number;
+}
+
 export interface IconWithLink extends Icon {
   link: string;
 }
@@ -58,6 +78,12 @@ export interface Project {
     name: string;
     icon: string;
   }[];
+}
+
+export interface ContactFormData {
+  name?: string;
+  email?: string;
+  message?: string;
 }
 
 type SidebarContextType = {
