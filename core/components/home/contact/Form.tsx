@@ -56,7 +56,7 @@ const ContactForm = () => {
           placeholder="What's on your mind?"
           onChange={(e) => setForm({ ...form, message: e.target.value })}
         />
-        <Button type="submit" text="Enviar" />
+        <Button type="submit" text="Send message" />
       </fieldset>
     </form>
   );
