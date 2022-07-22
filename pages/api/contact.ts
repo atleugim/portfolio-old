@@ -1,8 +1,9 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import nodemailer from "nodemailer";
 
 export default function sendContact(req: NextApiRequest, res: NextApiResponse) {
   try {
+    const nodemailer = require("nodemailer");
+
     const transporter = nodemailer.createTransport({
       port: 465,
       host: "smtp.gmail.com",
