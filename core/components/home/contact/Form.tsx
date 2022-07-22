@@ -1,32 +1,38 @@
 import Button from "@/components/shared/Button";
 import Input from "@/components/shared/Input";
 import TextArea from "@/components/shared/TextArea";
-import { hasValidValue, isEmail } from "@/utils/helpers";
-import { ContactFormData } from "@/utils/types";
+import useFetch from "@/hooks/useFetch";
+import { validateContactForm } from "@/utils/helpers";
+import { ContactFormData, ContactFormResponse } from "@/utils/types";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 const ContactForm = () => {
   const [form, setForm] = useState<ContactFormData>();
+  const { runFetch, isLoading } = useFetch<ContactFormResponse>(
+    "/api/contact",
+    "POST"
+  );
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (
-      hasValidValue(form?.name) &&
-      hasValidValue(form?.email) &&
-      hasValidValue(form?.message)
-    ) {
-      if (isEmail(form?.email)) {
-        console.log(`Form submitted ${form?.email}`);
+    if (validateContactForm(form)) {
+      const data = await runFetch(form);
+
+      if (data?.success) {
+        toast.success("Message sent successfully!");
       } else {
-        console.log("Invalid email");
+        toast.error("Something went wrong!");
       }
+    } else {
+      toast.error("Please check out the form!");
     }
   };
 
   return (
     <form className="w-full" onSubmit={handleSubmit}>
-      <fieldset className="flex flex-col w-full space-y-5">
+      <fieldset className="flex flex-col w-full space-y-5" disabled={isLoading}>
         <Input
           id="name"
           type="text"
@@ -56,7 +62,7 @@ const ContactForm = () => {
           placeholder="What's on your mind?"
           onChange={(e) => setForm({ ...form, message: e.target.value })}
         />
-        <Button type="submit" text="Send message" />
+        <Button type="submit" text="Send message" isLoading={isLoading} />
       </fieldset>
     </form>
   );

@@ -1,4 +1,6 @@
-export const isEmail = (email: string | undefined) => {
+import { ContactFormData } from "./types";
+
+const isEmail = (email: string | undefined) => {
   const tester =
     /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
 
@@ -27,6 +29,20 @@ export const isEmail = (email: string | undefined) => {
   return true;
 };
 
-export const hasValidValue = (input: string | undefined) => {
+const hasValidValue = (input: string | undefined) => {
   return input != undefined && input.trim().length > 0;
+};
+
+export const validateContactForm = (data: ContactFormData | undefined) => {
+  try {
+    return (
+      hasValidValue(data?.name) &&
+      hasValidValue(data?.email) &&
+      hasValidValue(data?.message) &&
+      isEmail(data?.email)
+    );
+  } catch (err) {
+    console.error(err);
+    return false;
+  }
 };

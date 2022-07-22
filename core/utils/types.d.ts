@@ -86,6 +86,11 @@ export interface ContactFormData {
   message?: string;
 }
 
+export interface ContactFormResponse {
+  success: boolean;
+  message?: string;
+}
+
 type SidebarContextType = {
   isOpen: Boolean;
   toggle: () => void;
