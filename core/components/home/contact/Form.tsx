@@ -4,10 +4,11 @@ import TextArea from "@/components/shared/TextArea";
 import useFetch from "@/hooks/useFetch";
 import { validateContactForm } from "@/utils/helpers";
 import { ContactFormData, ContactFormResponse } from "@/utils/types";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import toast from "react-hot-toast";
 
 const ContactForm = () => {
+  const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState<ContactFormData>();
   const { runFetch, isLoading } = useFetch<ContactFormResponse>(
     "/api/contact",
@@ -22,6 +23,7 @@ const ContactForm = () => {
 
       if (data?.success) {
         toast.success("Message sent successfully!");
+        formRef.current?.reset();
       } else {
         toast.error("Something went wrong!");
       }
@@ -31,7 +33,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form className="w-full" onSubmit={handleSubmit}>
+    <form ref={formRef} className="w-full" onSubmit={handleSubmit}>
       <fieldset className="flex flex-col w-full space-y-5" disabled={isLoading}>
         <Input
           id="name"
