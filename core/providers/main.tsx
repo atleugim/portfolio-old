@@ -7,7 +7,7 @@ const MainProvider = ({ children }: Component) => {
   return (
     <>
       <Head>
-        <title>Miguel Vega - Frontend Developer</title>
+        <title>Miguel Vega - Software Developer</title>
       </Head>
       <Toaster />
       <SidebarProvider>{children}</SidebarProvider>

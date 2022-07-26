@@ -1,13 +1,7 @@
-import {
-  EMAIL_URL,
-  GITHUB_URL,
-  INSTAGRAM_URL,
-  TWITTER_URL,
-} from "@/utils/vars";
+import { EMAIL_URL, GITHUB_URL, INSTAGRAM_URL } from "@/utils/vars";
 import GitHub from "./icons/GitHub";
 import Instagram from "./icons/Instagram";
 import Mail from "./icons/Mail";
-import Twitter from "./icons/Twitter";
 
 const MediaContact = () => {
   return (
@@ -16,7 +10,6 @@ const MediaContact = () => {
         <Mail size="1.3em" link={EMAIL_URL} />
         <GitHub size="1.3em" link={GITHUB_URL} />
         <Instagram size="1.4em" link={INSTAGRAM_URL} />
-        <Twitter size="1.3em" link={TWITTER_URL} />
         <div className="w-[1px] h-32 bg-primary dark:bg-light bg-opacity-70" />
       </div>
     </div>

@@ -4,7 +4,7 @@ import { Project } from "@/utils/types";
 
 const Project = (project: Project) => {
   return (
-    <div className="relative flex flex-col w-full duration-300 transform ring-1 rounded-xl group ring-primary dark:ring-light ring-opacity-5 dark:ring-opacity-10 backdrop-blur-md bg-glass-light dark:bg-glass-dark dark:bg-opacity-10 bg-opacity-10 hover:scale-102 md:flex-row">
+    <div className="relative flex flex-col w-full duration-300 transform ring-1 rounded-xl group ring-primary dark:ring-light ring-opacity-5 dark:ring-opacity-10 backdrop-blur-md bg-glass-light dark:bg-glass-dark dark:bg-opacity-10 bg-opacity-10 md:flex-row">
       <div className="flex flex-col items-start w-full h-full p-5 space-y-4 md:w-8/12">
         <h2 className="text-4xl font-extrabold">{project.name}</h2>
         <p className="font-light">{project.description}</p>
@@ -31,7 +31,7 @@ const Project = (project: Project) => {
         <Img
           src={project.image}
           alt={project.name}
-          className="object-contain object-center w-full h-full"
+          className="object-contain object-center w-full h-full duration-200 group-hover:scale-110"
         />
       </picture>
     </div>

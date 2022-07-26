@@ -24,7 +24,7 @@
   },
   {
     "name": "Neutro",
-    "description": "A real estate project builder, showcase and sales contact information.",
+    "description": "A real estate project builder landing page, showcase and sales contact information.",
     "image": "/assets/images/projects/neutro.png",
     "link": "https://wearered.co/neutro",
     "technologies": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "Ipapi.co package",
-    "description": "A ipapi.co wrapper for flutter, you can find the location, IP address, timezone, geolocation and other metadata.",
+    "description": "A ipapi.co wrapper for flutter, you can find the location, IP address, timezone, geolocation and other metadata to use in a Flutter app.",
     "image": "/assets/images/projects/ipapico-flutter.png",
     "link": "https://pub.dev/packages/ipapico_flutter",
     "technologies": [
@@ -96,7 +96,7 @@
   },
   {
     "name": "Monoschinos API",
-    "description": "Anime content api, built using web scrapping techniques on the original website.",
+    "description": "Anime content api, built using web scrapping techniques on the original website to get all the information.",
     "image": "/assets/images/projects/monoschinos-api.png",
     "link": "https://github.com/atleugim/monoschinos-api",
     "technologies": [

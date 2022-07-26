@@ -10,16 +10,18 @@ const Img = (image: Img) => {
   };
 
   return (
-    <img
-      width={image.width}
-      height={image.height}
-      className={image.className}
-      loading={image.loading ?? "lazy"}
-      decoding={image.decoding ?? "async"}
-      src={source || image.fallbackSrc}
-      onError={onError}
-      alt={image.alt}
-    />
+    <picture className="w-full h-full">
+      <img
+        width={image.width}
+        height={image.height}
+        className={image.className}
+        loading={image.loading ?? "lazy"}
+        decoding={image.decoding ?? "async"}
+        src={source || image.fallbackSrc}
+        onError={onError}
+        alt={image.alt}
+      />
+    </picture>
   );
 };
 

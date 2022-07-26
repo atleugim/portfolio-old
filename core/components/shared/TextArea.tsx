@@ -13,7 +13,7 @@ const TextArea = (data: TextAreaType) => {
         required={data.required || false}
         placeholder={data.placeholder}
         rows={data.rows || 5}
-        className={`p-3 rounded-xl dark:text-primary text-light bg-primary dark:bg-light font-medium outline-none ring-0 ${data.className}`}
+        className={`p-3 rounded-xl dark:text-primary text-light bg-primary bg-opacity-70 dark:bg-light font-medium outline-none ring-0 ${data.className}`}
         onChange={data.onChange}
       />
     </div>

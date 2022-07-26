@@ -23,9 +23,9 @@ const Welcome = () => {
         </div>
         {/* Some info */}
         <p>
-          I&apos;m a software engineer based in Colombia, specialized in web and
-          mobile development. Self-taught developer building personal digital
-          experiences.
+          I&apos;m a software developer based in Colombia, specialized in web
+          and mobile development. Self-taught developer building personal
+          digital experiences.
         </p>
         <p>
           +2 years of experience in software development, focused on <b>web</b>{" "}

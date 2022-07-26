@@ -1,5 +1,4 @@
 import { Head, Html, Main, NextScript } from "next/document";
-import React from "react";
 
 const Document = () => {
   return (
@@ -9,7 +8,7 @@ const Document = () => {
         <meta name="developer" content="atleugim" />
         <meta
           name="description"
-          content="I'm a software engineer based in Colombia, specialized in web and mobile development. Self-taught developer building personal digital experiences."
+          content="I'm a software developer based in Colombia, specialized in web and mobile development. Self-taught developer building personal digital experiences."
         />
         <meta
           name="keywords"
