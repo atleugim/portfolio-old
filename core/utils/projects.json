@@ -46,7 +46,25 @@
     ]
   },
   {
-    "name": "Ipapi.co package",
+    "name": "paginated_listview package",
+    "description": "A simple ListView to handle pagination to your API queries or whatever you want to do :)",
+    "image": "/assets/images/projects/paginated_listview.png",
+    "link": "https://pub.dev/packages/paginated_listview",
+    "technologies": [
+      {
+        "id": "dart",
+        "name": "Dart",
+        "icon": "devicon-dart-plain"
+      },
+      {
+        "id": "flutter",
+        "name": "Flutter",
+        "icon": "devicon-flutter-plain"
+      }
+    ]
+  },
+  {
+    "name": "ipapico_flutter package",
     "description": "A ipapi.co wrapper for flutter, you can find the location, IP address, timezone, geolocation and other metadata to use in a Flutter app.",
     "image": "/assets/images/projects/ipapico-flutter.png",
     "link": "https://pub.dev/packages/ipapico_flutter",
