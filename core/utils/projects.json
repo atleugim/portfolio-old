@@ -1,8 +1,31 @@
 [
   {
+    "name": "Hi Beauty",
+    "description": "A website to purchase a subscription box and/or beauty products.",
+    "image": "/assets/images/projects/hi-beauty.webp",
+    "link": "https://hibeauty.com.co/",
+    "technologies": [
+      {
+        "id": "reactjs",
+        "name": "React.js",
+        "icon": "devicon-react-original"
+      },
+      {
+        "id": "nextjs",
+        "name": "Next.js",
+        "icon": "devicon-nextjs-original"
+      },
+      {
+        "id": "tailwind",
+        "name": "Tailwind CSS",
+        "icon": "devicon-tailwindcss-plain"
+      }
+    ]
+  },
+  {
     "name": "StartupsLab",
     "description": "A platform to buy and view online courses on digital marketing focused on small entrepreneurs.",
-    "image": "/assets/images/projects/edu.png",
+    "image": "/assets/images/projects/edu.webp",
     "link": "https://startupslab.co/",
     "technologies": [
       {
@@ -25,7 +48,7 @@
   {
     "name": "Neutro",
     "description": "A real estate project builder landing page, showcase and sales contact information.",
-    "image": "/assets/images/projects/neutro.png",
+    "image": "/assets/images/projects/neutro.webp",
     "link": "https://wearered.co/neutro",
     "technologies": [
       {
@@ -48,7 +71,7 @@
   {
     "name": "paginated_listview package",
     "description": "A simple ListView to handle pagination to your API queries or whatever you want to do :)",
-    "image": "/assets/images/projects/paginated_listview.png",
+    "image": "/assets/images/projects/paginated_listview.webp",
     "link": "https://pub.dev/packages/paginated_listview",
     "technologies": [
       {
@@ -64,22 +87,9 @@
     ]
   },
   {
-    "name": "ipapico_flutter package",
-    "description": "A ipapi.co wrapper for flutter, you can find the location, IP address, timezone, geolocation and other metadata to use in a Flutter app.",
-    "image": "/assets/images/projects/ipapico-flutter.png",
-    "link": "https://pub.dev/packages/ipapico_flutter",
-    "technologies": [
-      {
-        "id": "dart",
-        "name": "Dart",
-        "icon": "devicon-dart-plain"
-      }
-    ]
-  },
-  {
     "name": "Take2 app",
-    "description": "Take2 connects you with brands and ventures through experiences and products that are best enjoyed in company.",
-    "image": "/assets/images/projects/take2_app.png",
+    "description": "A cross-platform app for buying discount coupons and redeeming them at different sites and businesses.",
+    "image": "/assets/images/projects/take2_app.webp",
     "link": "https://play.google.com/store/apps/details?id=co.startupslab.take2",
     "technologies": [
       {
@@ -96,8 +106,8 @@
   },
   {
     "name": "iCards app",
-    "description": "In this app you will be able to listen to the sounds and pronunciation in English of all the content of your Flash cards, while your children have fun.",
-    "image": "/assets/images/projects/icards_app.png",
+    "description": "An app where you will be able to listen to the sounds and pronunciation in English of all the content of your Flash cards.",
+    "image": "/assets/images/projects/icards_app.webp",
     "link": "https://play.google.com/store/apps/details?id=co.startupslab.icard",
     "technologies": [
       {
@@ -115,7 +125,7 @@
   {
     "name": "Monoschinos API",
     "description": "Anime content api, built using web scrapping techniques on the original website to get all the information.",
-    "image": "/assets/images/projects/monoschinos-api.png",
+    "image": "/assets/images/projects/monoschinos-api.webp",
     "link": "https://github.com/atleugim/monoschinos-api",
     "technologies": [
       {
@@ -138,7 +148,7 @@
   {
     "name": "Fembed Source Scrapper API",
     "description": "API built to get original video sources from fembed.com via web scrapping.",
-    "image": "/assets/images/projects/fembedsourcescraper-api.png",
+    "image": "/assets/images/projects/fembedsourcescraper-api.webp",
     "link": "https://github.com/atleugim/Fembed-Source-Scrapper",
     "technologies": [
       {

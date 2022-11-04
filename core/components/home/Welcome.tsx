@@ -41,7 +41,7 @@ const Welcome = () => {
       <div className="flex items-center justify-center w-full h-full col-span-2 max-h-80 md:w-4/12">
         <picture className="w-full h-full">
           <Img
-            src="/assets/images/me.png"
+            src="/assets/images/me.webp"
             alt="Miguel Vega"
             loading="eager"
             className="object-contain w-full h-full rounded-full animate-fadeIn"
