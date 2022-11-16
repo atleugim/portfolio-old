@@ -44,7 +44,7 @@ const Welcome = () => {
           priority
           src="/assets/images/me.webp"
           alt="Miguel Vega"
-          className="object-contain animate-fadeIn"
+          className="animate-fadeIn"
         />
       </div>
     </section>

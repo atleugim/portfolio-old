@@ -2,7 +2,7 @@ import { Head, Html, Main, NextScript } from "next/document";
 
 const Document = () => {
   return (
-    <Html lang="en">
+    <Html lang="en" className="dark">
       <Head>
         <meta charSet="utf-8" />
         <meta name="developer" content="atleugim" />
@@ -12,7 +12,7 @@ const Document = () => {
         />
         <meta
           name="keywords"
-          content="developer, development, desarrollo, programacion, desarrollador, react, frontend, web, web developer, flutter, dart, mobile developer, desarrollador movil, Flutter developer, app developer, android, ios"
+          content="developer, development, desarrollo, programación, desarrollador, react, frontend, web, web developer, flutter, dart, mobile developer, desarrollador móvil, Flutter developer, app developer, android, ios"
         />
         <link
           rel="stylesheet"
@@ -20,7 +20,7 @@ const Document = () => {
         />
         {/* <link rel="canonical" href="https://startupslab.co/" /> */}
       </Head>
-      <body className={`${process.env.IS_DEBUG ? "debug-screens" : ""} dark`}>
+      <body className={process.env.IS_DEBUG ? "debug-screens" : ""}>
         <Main />
         <NextScript />
       </body>

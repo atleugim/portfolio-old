@@ -10,6 +10,7 @@ import toast from "react-hot-toast";
 const ContactForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState<ContactFormData>();
+
   const { runFetch, isLoading } = useFetch<ContactFormResponse>(
     "/api/contact",
     "POST"

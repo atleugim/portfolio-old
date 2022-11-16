@@ -1,20 +1,9 @@
-import useLockedBody from "@/hooks/useLockedBody";
 import useSidebar from "@/hooks/useSidebar";
 import { ComponentWithoutChildren } from "@/utils/types";
-import { useEffect } from "react";
 import Close from "../icons/Close";
 
 const CloseSidebar = ({ className }: ComponentWithoutChildren) => {
-  const { isOpen, toggle } = useSidebar();
-  const { setLocked } = useLockedBody();
-
-  useEffect(() => {
-    if (isOpen) {
-      setLocked(true);
-    } else {
-      setLocked(false);
-    }
-  }, [isOpen, setLocked]);
+  const { toggle } = useSidebar();
 
   return (
     <button

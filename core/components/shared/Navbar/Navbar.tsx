@@ -1,4 +1,3 @@
-import useIsSSR from "@/hooks/useIsSSR";
 import { Routes } from "@/utils/routes";
 import ToggleDarkMode from "../dark-mode/ToggleDarkMode";
 import GlassContainer from "../GlassContainer";
@@ -7,10 +6,6 @@ import Wrapper from "../Wrapper";
 import NavbarLink from "./NavLink";
 
 const Navbar = () => {
-  const isSSR = useIsSSR();
-
-  if (isSSR) return null;
-
   return (
     <GlassContainer className="sticky top-0 z-10 dark:bg-primary bg-light">
       <Wrapper className="justify-between">

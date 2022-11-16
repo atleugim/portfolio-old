@@ -1,7 +1,5 @@
-import React from "react";
-
 const CurrentModeIcon = ({ isDarkMode = true }) => {
-  if (!isDarkMode) {
+  if (isDarkMode) {
     return (
       <svg
         stroke="currentColor"
