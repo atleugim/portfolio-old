@@ -10,15 +10,8 @@ const Projects = () => {
         <span>I&apos;ve built</span>
       </p>
       <div className="flex flex-col items-start justify-start space-y-5">
-        {projects.map((project) => (
-          <Project
-            key={project.link}
-            name={project.name}
-            description={project.description}
-            image={project.image}
-            link={project.link}
-            technologies={project.technologies}
-          />
+        {projects.map((project, key) => (
+          <Project key={project.link} priority={key === 0} project={project} />
         ))}
       </div>
     </section>

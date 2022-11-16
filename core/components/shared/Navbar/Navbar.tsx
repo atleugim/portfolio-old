@@ -1,15 +1,13 @@
 import useIsSSR from "@/hooks/useIsSSR";
-import useSidebar from "@/hooks/useSidebar";
 import { Routes } from "@/utils/routes";
 import ToggleDarkMode from "../dark-mode/ToggleDarkMode";
 import GlassContainer from "../GlassContainer";
-import SidebarButton from "../sidebar/SidebarButton";
+import SidebarButton from "../Sidebar/SidebarButton";
 import Wrapper from "../Wrapper";
 import NavbarLink from "./NavLink";
 
 const Navbar = () => {
   const isSSR = useIsSSR();
-  const { isOpen, toggle } = useSidebar();
 
   if (isSSR) return null;
 
