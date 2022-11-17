@@ -18,15 +18,15 @@ const NavbarLink = ({ link, index, className = "text-sm" }: NavbarLink) => {
   };
 
   return (
-    <Link href={link.href} passHref>
-      <li
-        onClick={handleOnClick}
-        className={`flex py-1 space-x-1 list-none rounded-md cursor-pointer ${className}`}
-      >
+    <li
+      onClick={handleOnClick}
+      className={`flex py-1 space-x-1 list-none rounded-md cursor-pointer ${className}`}
+    >
+      <Link href={link.href} passHref>
         <span className="text-secondary">0{index + 1}.</span>
         <span className="duration-300 hover:text-secondary">{link.name}</span>
-      </li>
-    </Link>
+      </Link>
+    </li>
   );
 };
 
