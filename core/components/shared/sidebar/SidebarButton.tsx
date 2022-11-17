@@ -1,5 +1,5 @@
 import useSidebar from "@/hooks/useSidebar";
-import Menu from "../icons/Menu";
+import Menu from "../Icons/Menu";
 
 const SidebarButton = () => {
   const { toggle } = useSidebar();

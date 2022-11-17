@@ -1,6 +1,6 @@
 import useSidebar from "@/hooks/useSidebar";
 import { ComponentWithoutChildren } from "@/utils/types";
-import Close from "../icons/Close";
+import Close from "../Icons/Close";
 
 const CloseSidebar = ({ className }: ComponentWithoutChildren) => {
   const { toggle } = useSidebar();

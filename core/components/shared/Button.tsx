@@ -1,6 +1,6 @@
 import { Button } from "@/utils/types";
 import Link from "next/link";
-import Spinner from "./icons/Spinner";
+import Spinner from "./Icons/Spinner";
 
 const Button = ({
   children,

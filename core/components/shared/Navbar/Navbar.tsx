@@ -1,5 +1,5 @@
 import { Routes } from "@/utils/routes";
-import ToggleDarkMode from "../dark-mode/ToggleDarkMode";
+import ToggleDarkMode from "../DarkMode/ToggleDarkMode";
 import GlassContainer from "../GlassContainer";
 import SidebarButton from "../Sidebar/SidebarButton";
 import Wrapper from "../Wrapper";

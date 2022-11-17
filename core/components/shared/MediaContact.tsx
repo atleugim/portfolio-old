@@ -1,6 +1,6 @@
 import { EMAIL_URL, GITHUB_URL } from "@/utils/vars";
-import GitHub from "./icons/GitHub";
-import Mail from "./icons/Mail";
+import GitHub from "./Icons/GitHub";
+import Mail from "./Icons/Mail";
 
 const MediaContact = () => {
   return (
