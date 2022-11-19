@@ -64,7 +64,6 @@ export interface Project {
   technologies: {
     id: string;
     name: string;
-    icon: string;
   }[];
 }
 

@@ -1,5 +1,6 @@
 import Button from "@/components/shared/Button";
 import { Project } from "@/utils/types";
+import { iconResolver } from "../../shared/Icons/Technologies";
 import ImageWithFallback from "../../shared/ImageWithFallback";
 
 interface ProjectProps {
@@ -13,16 +14,10 @@ const Project = ({ project, priority }: ProjectProps) => {
       <div className="flex flex-col items-start w-full h-full p-5 space-y-4 md:w-8/12">
         <h2 className="text-4xl font-bold">{project.name}</h2>
         <p className="font-light">{project.description}</p>
-        <div className="flex w-full space-x-4">
-          {project.technologies.map((technology) => (
-            <i
-              key={technology.id}
-              role="img"
-              aria-label="technology-icon"
-              className={`${technology.icon} text-2xl`}
-              title={technology.name}
-            />
-          ))}
+        <div className="flex w-full space-x-4 dark:text-white">
+          {project.technologies.map((technology) =>
+            iconResolver(technology.id, 1.4)
+          )}
         </div>
         <Button
           className="duration-300 bg-glass-light dark:bg-glass-dark hover:bg-light dark:hover:bg-primary"

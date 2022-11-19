@@ -14,11 +14,7 @@ const Document = () => {
           name="keywords"
           content="developer, development, desarrollo, programación, desarrollador, react, frontend, web, web developer, flutter, dart, mobile developer, desarrollador móvil, Flutter developer, app developer, android, ios"
         />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-        />
-        {/* <link rel="canonical" href="https://startupslab.co/" /> */}
+        <link rel="canonical" href="https://atleugim.vercel.app/" />
       </Head>
       <body className={process.env.IS_DEBUG ? "debug-screens" : ""}>
         <Main />
