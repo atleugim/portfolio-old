@@ -9,7 +9,7 @@ const MainProvider = ({ children }: Component) => {
       <Head>
         <title>Miguel Vega - Software Developer</title>
       </Head>
-      <Toaster />
+      <Toaster containerClassName="text-sm font-medium" />
       <SidebarProvider>{children}</SidebarProvider>
     </>
   );

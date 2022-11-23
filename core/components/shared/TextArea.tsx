@@ -1,11 +1,14 @@
 import { TextAreaType } from "@/utils/types";
+import { useId } from "react";
 
 const TextArea = (data: TextAreaType) => {
+  const id = useId();
+
   return (
     <div className="flex flex-col w-full space-y-1">
-      {data.label && <label htmlFor={data.id}>{data.label}</label>}
+      {data.label && <label htmlFor={id}>{data.label}</label>}
       <textarea
-        id={data.id}
+        id={id}
         name={data.name}
         defaultValue={data.defaultValue}
         disabled={data.disabled}

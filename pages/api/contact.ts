@@ -1,48 +1,58 @@
+import { ContactFormData } from "@/utils/types";
 import { NextApiRequest, NextApiResponse } from "next";
 
+const setupNodemailer = () => {
+  const nodemailer = require("nodemailer");
+  return nodemailer.createTransport({
+    port: 465,
+    host: "smtp.gmail.com",
+    auth: {
+      user: process.env.GMAIL_EMAIL,
+      pass: process.env.GMAIL_PASSWORD,
+    },
+    secure: true,
+  });
+};
+
+const send = async (data: ContactFormData) => {
+  const mailData = {
+    from: data.email,
+    to: process.env.GMAIL_EMAIL,
+    subject: `New portfolio message from ${data.name}`,
+    html: `
+      <p>Name: ${data.name}</p>
+      <p>Email: ${data.email}</p>
+      <p>Message: ${data.message}</p>
+    `,
+  };
+
+  const transporter = setupNodemailer();
+
+  return transporter.sendMail(mailData);
+};
+
 export default function sendContact(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const nodemailer = require("nodemailer");
-
-    const transporter = nodemailer.createTransport({
-      port: 465,
-      host: "smtp.gmail.com",
-      auth: {
-        user: process.env.GMAIL_EMAIL,
-        pass: process.env.GMAIL_PASSWORD,
-      },
-      secure: true,
-    });
-
-    const mailData = {
-      from: req.body.email,
-      to: process.env.GMAIL_EMAIL,
-      subject: `New portfolio message from ${req.body.name}`,
-      html: `
-        <h2>New portfolio message from: ${req.body.name}</h2>
-        <p>Email: ${req.body.email}</p>
-        <p>Message: ${req.body.message}</p>
-      `,
-    };
-
-    transporter.sendMail(mailData, function (err: Error, _info: any) {
-      if (err) {
-        return res.status(500).json({
-          success: false,
-          message: err,
-        });
-      } else {
-        return res.status(200).json({
-          success: true,
-          message: "Message sent successfully",
-        });
-      }
-    });
-  } catch (err) {
-    console.error(err);
-    return res.status(500).json({
-      success: false,
-      message: err,
-    });
-  }
+  return new Promise((resolve, reject) => {
+    send(req.body)
+      .then((_) => {
+        res.statusCode = 200;
+        res.end(
+          JSON.stringify({
+            success: true,
+            message: "Message sent successfully",
+          })
+        );
+        resolve(res);
+      })
+      .catch((err) => {
+        res.statusCode = 500;
+        res.end(
+          JSON.stringify({
+            success: false,
+            message: err,
+          })
+        );
+        reject(err);
+      });
+  });
 }

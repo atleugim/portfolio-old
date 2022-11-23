@@ -1,10 +1,14 @@
 import { InputType } from "@/utils/types";
+import { useId } from "react";
 
 const Input = (data: InputType) => {
+  const id = useId();
+
   return (
     <div className="flex flex-col w-full space-y-1">
-      {data.label && <label htmlFor={data.id}>{data.label}</label>}
+      {data.label && <label htmlFor={id}>{data.label}</label>}
       <input
+        id={id}
         type={data.type || "text"}
         name={data.name}
         defaultValue={data.defaultValue}

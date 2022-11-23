@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV !== "development",
+  },
   env: {
     IS_DEBUG: process.env.NODE_ENV === "development",
   },

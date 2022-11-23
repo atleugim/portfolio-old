@@ -24,7 +24,7 @@ const ContactForm = () => {
 
       if (data?.success) {
         toast.success("Message sent successfully!");
-        formRef.current?.reset();
+        // formRef.current?.reset();
       } else {
         toast.error("Something went wrong!");
       }
