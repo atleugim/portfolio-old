@@ -13,11 +13,6 @@ export interface ComponentWithoutChildren extends Component {
   children?: React.ReactNode;
 }
 
-export interface ImageFallback {
-  alt: string;
-  src: string;
-}
-
 export interface Button extends Component {
   children?: React.ReactNode;
   childrenPosition?: "start" | "end";
