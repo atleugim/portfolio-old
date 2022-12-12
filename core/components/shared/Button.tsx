@@ -32,6 +32,7 @@ const Button = ({
         <Link
           href={href}
           passHref
+          target={target}
           className={`${className} ${
             isLoading ? "py-1" : "py-2"
           } px-6 rounded-md text-xs font-bold uppercase hover:bg-opacity-90 duration-300 border border-gray-200`}

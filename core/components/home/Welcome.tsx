@@ -26,7 +26,7 @@ const Welcome = () => {
           digital experiences.
         </p>
         <p>
-          +2 years of experience in software development, focused on{" "}
+          +3 years of experience in software development, focused on{" "}
           <b className="font-medium">web</b> with technologies like{" "}
           <ExternalLink href={JAVASCRIPT_URL} name="Javascript" />,{" "}
           <ExternalLink href={REACT_URL} name="React.js" />,{" "}
