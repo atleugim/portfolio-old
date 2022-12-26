@@ -18,7 +18,7 @@ const MainLayout = ({ children, className = "" }: Component) => {
     >
       <Navbar />
       <Sidebar />
-      <div className="py-10 md:py-20 grow">
+      <div className="py-10 overflow-x-hidden md:py-20 grow">
         <Wrapper className={`flex-col ${className}`}>{children}</Wrapper>
       </div>
       <MediaContact />
