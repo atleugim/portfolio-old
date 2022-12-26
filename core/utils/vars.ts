@@ -1,3 +1,4 @@
+export const LINKEDIN_URL = "https://www.linkedin.com/in/atleugim";
 export const GITHUB_URL = "https://github.com/atleugim";
 export const EMAIL = "vegaleugim@gmail.com";
 export const EMAIL_URL = `mailto:${EMAIL}`;
