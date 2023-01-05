@@ -1,0 +1,25 @@
+{
+  "page.meta.title": "Miguel Vega - Desarrollador de software",
+  "page.meta.description": "",
+
+  "page.navbar.home": "Inicio",
+  "page.navbar.projects": "Proyectos",
+  "page.navbar.contact": "Contacto",
+
+  "page.home.title": "<span class='text-secondary'>Hola,</span>&nbsp;mi nombre es",
+  "page.home.description.1": "Soy un desarrollador de software radicado en Colombia, especializado en desarrollo web y móvil. Autodidacta construyendo experiencias digitales personales.",
+  "page.home.description.2": "+3 años de experiencia en desarrollo de software, centrado en",
+  "page.home.description.3": "con tecnologías como",
+  "page.home.and": "y",
+  "page.home.with": "con",
+
+  "page.projects.title": "Algunas&nbsp;<span class='text-secondary'>cosas</span>&nbsp; que he hecho",
+  "page.projects.view_btn": "Ver proyecto",
+
+  "page.contact.title": "Envíame un&nbsp;<span class='text-secondary'>mensaje</span>",
+  "page.contact.form.name": "Tu nombre",
+  "page.contact.form.email": "Tu correo electrónico",
+  "page.contact.form.message": "Tu mensaje",
+  "page.contact.form.message_placeholder": "¿Qué tienes en mente?",
+  "page.contact.form.button": "Enviar mensaje"
+}

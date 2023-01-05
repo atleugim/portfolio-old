@@ -8,6 +8,10 @@ const nextConfig = {
   env: {
     IS_DEBUG: process.env.NODE_ENV === "development",
   },
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "es"],
+  },
 };
 
 module.exports = nextConfig;

@@ -9,15 +9,24 @@ export class Routes {
     return [
       {
         href: Routes.home,
-        name: "Home",
+        name: {
+          en: "Home",
+          es: "Inicio",
+        },
       },
       {
         href: Routes.projects,
-        name: "Projects",
+        name: {
+          en: "Projects",
+          es: "Proyectos",
+        },
       },
       {
         href: Routes.contact,
-        name: "Contact",
+        name: {
+          en: "Contact",
+          es: "Contacto",
+        },
       },
     ];
   }

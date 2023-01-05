@@ -1,8 +1,13 @@
 import React from "react";
 
+export interface Language {
+  en: string;
+  es: string;
+}
+
 export interface Route {
   href: string;
-  name: string;
+  name: Language;
 }
 
 export interface Component {

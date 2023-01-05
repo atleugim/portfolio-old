@@ -1,6 +1,7 @@
 import useSidebar from "@/hooks/useSidebar";
-import { Route } from "@/utils/types";
+import { Language, Route } from "@/utils/types";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 interface NavbarLink {
   link: Route;
@@ -10,6 +11,7 @@ interface NavbarLink {
 
 const NavbarLink = ({ link, index, className = "text-sm" }: NavbarLink) => {
   const { isOpen, toggle } = useSidebar();
+  const { i18n } = useTranslation();
 
   const handleOnClick = () => {
     if (isOpen) {
@@ -24,7 +26,9 @@ const NavbarLink = ({ link, index, className = "text-sm" }: NavbarLink) => {
     >
       <Link href={link.href} passHref>
         <span className="text-secondary">0{index + 1}.</span>
-        <span className="duration-300 hover:text-secondary">{link.name}</span>
+        <span className="duration-300 hover:text-secondary">
+          {link.name[i18n.language as keyof Language]}
+        </span>
       </Link>
     </li>
   );

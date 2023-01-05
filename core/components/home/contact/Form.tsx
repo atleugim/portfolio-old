@@ -6,8 +6,16 @@ import { validateContactForm } from "@/utils/helpers";
 import { ContactFormData, ContactFormResponse } from "@/utils/types";
 import { useRef, useState } from "react";
 import toast from "react-hot-toast";
+import { useTranslation } from "react-i18next";
 
 const ContactForm = () => {
+  const { t } = useTranslation();
+  const nameLabel = t("page.contact.form.name");
+  const emailLabel = t("page.contact.form.email");
+  const messageLabel = t("page.contact.form.message");
+  const messagePlaceholder = t("page.contact.form.message_placeholder");
+  const buttonLabel = t("page.contact.form.button");
+
   const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState<ContactFormData>();
 
@@ -41,7 +49,7 @@ const ContactForm = () => {
           type="text"
           required
           name="name"
-          label="Your name"
+          label={nameLabel}
           autoCapitalize="words"
           placeholder="John Doe"
           onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -51,7 +59,7 @@ const ContactForm = () => {
           type="email"
           required
           name="email"
-          label="Your email"
+          label={emailLabel}
           autoCapitalize="none"
           placeholder="john@doe.com"
           onChange={(e) => setForm({ ...form, email: e.target.value })}
@@ -60,12 +68,12 @@ const ContactForm = () => {
           id="message"
           required
           name="message"
-          label="Your message"
+          label={messageLabel}
           autoCapitalize="sentences"
-          placeholder="What's on your mind?"
+          placeholder={messagePlaceholder}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
         />
-        <Button type="submit" text="Send message" isLoading={isLoading} />
+        <Button type="submit" text={buttonLabel} isLoading={isLoading} />
       </fieldset>
     </form>
   );

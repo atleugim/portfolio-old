@@ -23,7 +23,8 @@
       "@/providers/*": ["core/providers/*"],
       "@/repositories/*": ["core/repositories/*"],
       "@/utils/*": ["core/utils/*"],
-      "@/pages/*": ["pages/*"]
+      "@/pages/*": ["pages/*"],
+      "@/locales/*": ["locales/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
