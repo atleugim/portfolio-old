@@ -4,6 +4,14 @@ import Sidebar from "@/components/shared/Sidebar/Sidebar";
 import Wrapper from "@/components/shared/Wrapper";
 import { Component } from "@/utils/types";
 import { IBM_Plex_Sans } from "@next/font/google";
+import dynamic from "next/dynamic";
+
+const LanguageSwitcher = dynamic(
+  () => import("@/components/shared/LanguageSwitcher"),
+  {
+    ssr: false,
+  }
+);
 
 const ibmPlexSans = IBM_Plex_Sans({
   weight: ["300", "400", "500", "700"],
@@ -22,6 +30,7 @@ const MainLayout = ({ children, className = "" }: Component) => {
         <Wrapper className={`flex-col ${className}`}>{children}</Wrapper>
       </div>
       <MediaContact />
+      <LanguageSwitcher />
     </div>
   );
 };
