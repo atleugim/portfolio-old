@@ -63,7 +63,7 @@ export interface IconWithLink extends Icon {
 
 export interface Project {
   name: string;
-  description: string;
+  description: Language;
   image: string;
   link: string;
   technologies: {

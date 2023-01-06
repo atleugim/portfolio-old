@@ -1,7 +1,10 @@
 [
   {
     "name": "Hi Beauty",
-    "description": "A website to purchase a subscription box and/or beauty products.",
+    "description": {
+      "en": "A website to purchase a subscription box and/or beauty products",
+      "es": "Un sitio web para comprar una caja de suscripción y/o productos de belleza"
+    },
     "image": "/assets/images/projects/hi-beauty.webp",
     "link": "https://hibeauty.com.co/",
     "technologies": [
@@ -21,7 +24,10 @@
   },
   {
     "name": "StartupsLab",
-    "description": "A platform to buy and view online courses on digital marketing focused on small entrepreneurs.",
+    "description": {
+      "en": "A platform to buy and view online courses on digital marketing focused on small entrepreneurs.",
+      "es": "Una plataforma para comprar y ver cursos online de marketing digital enfocados a pequeños emprendedores."
+    },
     "image": "/assets/images/projects/edu.webp",
     "link": "https://startupslab.co/",
     "technologies": [
@@ -41,7 +47,10 @@
   },
   {
     "name": "Neutro",
-    "description": "A real estate project builder landing page, showcase and sales contact information.",
+    "description": {
+      "en": "A real estate project builder landing page, showcase and sales contact information.",
+      "es": "Una página de aterrizaje, vitrina y datos de contacto de ventas para un proyecto inmobiliario."
+    },
     "image": "/assets/images/projects/neutro.webp",
     "link": "https://wearered.co/neutro",
     "technologies": [
@@ -61,7 +70,10 @@
   },
   {
     "name": "paginated_listview package",
-    "description": "A simple ListView to handle pagination to your API queries or whatever you want to do :)",
+    "description": {
+      "en": "A simple ListView to handle pagination to your API queries or whatever you want to do :)",
+      "es": "Un simple ListView para manejar paginación a tus consultas a una API o lo que quieras hacer :)"
+    },
     "image": "/assets/images/projects/paginated_listview.webp",
     "link": "https://pub.dev/packages/paginated_listview",
     "technologies": [
@@ -77,7 +89,10 @@
   },
   {
     "name": "Take2 app",
-    "description": "A cross-platform app for buying discount coupons and redeeming them at different sites and businesses.",
+    "description": {
+      "en": "A cross-platform app for buying discount coupons and redeeming them at different sites and businesses.",
+      "es": "Una app multiplataforma para comprar cupones de descuento y canjearlos en diferentes sitios y negocios."
+    },
     "image": "/assets/images/projects/take2_app.webp",
     "link": "https://play.google.com/store/apps/details?id=co.startupslab.take2",
     "technologies": [
@@ -93,7 +108,10 @@
   },
   {
     "name": "iCards app",
-    "description": "An app where you will be able to listen to the sounds and pronunciation in English of all the content of your Flash cards.",
+    "description": {
+      "en": "An app where you will be able to listen to the sounds and pronunciation in English of all the content of your Flash cards.",
+      "es": "Una app donde podrás escuchar los sonidos y pronunciación en inglés de todo el contenido de tus tarjetas flash."
+    },
     "image": "/assets/images/projects/icards_app.webp",
     "link": "https://play.google.com/store/apps/details?id=co.startupslab.icard",
     "technologies": [
@@ -109,7 +127,10 @@
   },
   {
     "name": "Monoschinos API",
-    "description": "Anime content api, built using web scrapping techniques on the original website to get all the information.",
+    "description": {
+      "en": "Anime content api, built using web scrapping techniques on the original website to get all the information.",
+      "es": "API de contenido de anime, construida usando técnicas de web scrapping en el sitio web original para obtener toda la información."
+    },
     "image": "/assets/images/projects/monoschinos-api.webp",
     "link": "https://github.com/atleugim/monoschinos-api",
     "technologies": [
@@ -129,7 +150,10 @@
   },
   {
     "name": "Fembed Source Scrapper API",
-    "description": "API built to get original video sources from fembed.com via web scrapping.",
+    "description": {
+      "en": "API built to get original video sources from fembed.com via web scrapping.",
+      "es": "API construida para obtener fuentes de video originales de fembed.com a través de web scrapping."
+    },
     "image": "/assets/images/projects/fembedsourcescraper-api.webp",
     "link": "https://github.com/atleugim/Fembed-Source-Scrapper",
     "technologies": [

@@ -1,5 +1,5 @@
 import Button from "@/components/shared/Button";
-import { Project } from "@/utils/types";
+import { Language, Project } from "@/utils/types";
 import { useTranslation } from "react-i18next";
 import { iconResolver } from "../../shared/Icons/Technologies";
 import ImageWithFallback from "../../shared/ImageWithFallback";
@@ -10,14 +10,16 @@ interface ProjectProps {
 }
 
 const Project = ({ project, priority }: ProjectProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const viewLabel = t("page.projects.view_btn");
 
   return (
     <div className="relative flex flex-col w-full duration-300 transform ring-1 rounded-xl group ring-primary dark:ring-light ring-opacity-5 dark:ring-opacity-10 backdrop-blur-md bg-glass-light dark:bg-glass-dark dark:bg-opacity-10 bg-opacity-10 md:flex-row">
       <div className="flex flex-col items-start w-full h-full p-5 space-y-4 md:w-8/12">
         <h2 className="text-4xl font-bold">{project.name}</h2>
-        <p className="font-light">{project.description}</p>
+        <p className="font-light">
+          {project.description[i18n.language as keyof Language]}
+        </p>
         <div className="flex w-full space-x-4 dark:text-white text-primary">
           {project.technologies.map((technology) => (
             <span title={technology.name} key={technology.id} className="">
