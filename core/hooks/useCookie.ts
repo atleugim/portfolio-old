@@ -1,12 +1,12 @@
 import Cookies from "js-cookie";
 import { useCallback, useEffect, useState } from "react";
 
-const useCookie = (name: string, defaultValue?: string) => {
-  const [value, setValue] = useState<string | null>(() => {
+const useCookie = (name: string, defaultValue: string | undefined) => {
+  const [value, setValue] = useState<string | undefined>(() => {
     const cookie = Cookies.get(name)?.trim();
 
     if (!cookie) {
-      return null;
+      return undefined;
     }
 
     return cookie;
@@ -22,7 +22,7 @@ const useCookie = (name: string, defaultValue?: string) => {
 
   const deleteCookie = useCallback(() => {
     Cookies.remove(name);
-    setValue(null);
+    setValue(undefined);
   }, [name]);
 
   useEffect(() => {
