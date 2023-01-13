@@ -44,7 +44,11 @@ const Document = () => {
 
         <link rel="canonical" href="https://atleugim.vercel.app/" />
       </Head>
-      <body className={process.env.IS_DEBUG ? "debug-screens" : ""}>
+      <body
+        className={`${
+          process.env.IS_DEBUG ? "debug-screens" : ""
+        } overflow-x-hidden`}
+      >
         <Main />
         <NextScript />
       </body>
