@@ -5,7 +5,7 @@ import Mail from "./Icons/Mail";
 
 const MediaContact = () => {
   return (
-    <div className="fixed bottom-0 flex justify-between px-4 animate-slideInUp">
+    <div className="fixed bottom-0 flex justify-between px-4 duration-300 animate-slideInUp">
       <div className="flex flex-col items-center justify-end space-y-5 dark:text-light text-primary-dark text-opacity-80">
         <LinkedIn size="1.3em" link={LINKEDIN_URL} />
         <Mail size="1.3em" link={EMAIL_URL} />
