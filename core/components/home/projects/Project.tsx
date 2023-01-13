@@ -42,7 +42,7 @@ const Project = ({ project, priority }: ProjectProps) => {
           priority={priority}
           src={project.image}
           alt={project.name}
-          className="object-contain object-center w-full h-full duration-200 group-hover:scale-110"
+          className="object-contain object-center w-full h-full duration-300 md:group-hover:scale-110"
         />
       </div>
     </div>
