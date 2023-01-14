@@ -18,9 +18,8 @@
   "page.projects.view_btn": "View project",
 
   "page.contact.title": "Send me a&nbsp;<span class='text-secondary'>message</span>",
-  "page.contact.form.name": "Your name",
-  "page.contact.form.email": "Your email",
-  "page.contact.form.message": "Your message",
-  "page.contact.form.message_placeholder": "What's on your mind?",
+  "page.contact.form.name": "Name",
+  "page.contact.form.email": "Email",
+  "page.contact.form.message": "What's on your mind?",
   "page.contact.form.button": "Send message"
 }

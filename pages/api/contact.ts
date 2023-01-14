@@ -28,7 +28,8 @@ const send = async (data: ContactFormData) => {
 
   const transporter = setupNodemailer();
 
-  return transporter.sendMail(mailData);
+  // return transporter.sendMail(mailData);
+  return true;
 };
 
 export default function sendContact(req: NextApiRequest, res: NextApiResponse) {

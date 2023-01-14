@@ -18,9 +18,8 @@
   "page.projects.view_btn": "Ver proyecto",
 
   "page.contact.title": "Envíame un&nbsp;<span class='text-secondary'>mensaje</span>",
-  "page.contact.form.name": "Tu nombre",
-  "page.contact.form.email": "Tu correo electrónico",
-  "page.contact.form.message": "Tu mensaje",
-  "page.contact.form.message_placeholder": "¿Qué tienes en mente?",
+  "page.contact.form.name": "Nombre",
+  "page.contact.form.email": "Correo electrónico",
+  "page.contact.form.message": "¿Qué tienes en mente?",
   "page.contact.form.button": "Enviar mensaje"
 }

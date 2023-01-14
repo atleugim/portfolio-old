@@ -48,7 +48,6 @@ export interface InputType {
   disabled?: boolean;
   required?: boolean;
   readOnly?: boolean;
-  label?: string;
   autoCapitalize?: "none" | "sentences" | "words" | "characters";
 }
 

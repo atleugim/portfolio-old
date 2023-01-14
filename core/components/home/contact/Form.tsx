@@ -13,7 +13,6 @@ const ContactForm = () => {
   const nameLabel = t("page.contact.form.name");
   const emailLabel = t("page.contact.form.email");
   const messageLabel = t("page.contact.form.message");
-  const messagePlaceholder = t("page.contact.form.message_placeholder");
   const buttonLabel = t("page.contact.form.button");
 
   const formRef = useRef<HTMLFormElement>(null);
@@ -32,7 +31,7 @@ const ContactForm = () => {
 
       if (data?.success) {
         toast.success("Message sent successfully!");
-        // formRef.current?.reset();
+        formRef.current?.reset();
       } else {
         toast.error("Something went wrong!");
       }
@@ -49,9 +48,8 @@ const ContactForm = () => {
           type="text"
           required
           name="name"
-          label={nameLabel}
           autoCapitalize="words"
-          placeholder="John Doe"
+          placeholder={nameLabel}
           onChange={(e) => setForm({ ...form, name: e.target.value })}
         />
         <Input
@@ -59,18 +57,16 @@ const ContactForm = () => {
           type="email"
           required
           name="email"
-          label={emailLabel}
           autoCapitalize="none"
-          placeholder="john@doe.com"
+          placeholder={emailLabel}
           onChange={(e) => setForm({ ...form, email: e.target.value })}
         />
         <TextArea
           id="message"
           required
           name="message"
-          label={messageLabel}
           autoCapitalize="sentences"
-          placeholder={messagePlaceholder}
+          placeholder={messageLabel}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
         />
         <Button type="submit" text={buttonLabel} isLoading={isLoading} />

@@ -6,7 +6,6 @@ const TextArea = (data: TextAreaType) => {
 
   return (
     <div className="flex flex-col w-full space-y-1">
-      {data.label && <label htmlFor={id}>{data.label}</label>}
       <textarea
         id={id}
         name={data.name}
@@ -16,7 +15,7 @@ const TextArea = (data: TextAreaType) => {
         required={data.required || false}
         placeholder={data.placeholder}
         rows={data.rows || 5}
-        className={`p-3 rounded-xl dark:text-light text-primary bg-white dark:bg-light dark:bg-opacity-30 font-medium outline-none ring-0 placeholder:text-opacity-50 dark:placeholder:text-opacity-50 placeholder:text-primary dark:placeholder:text-light ${data.className}`}
+        className={`p-3 rounded-xl dark:text-light text-primary bg-white dark:bg-light dark:bg-opacity-30 outline-none ring-0 placeholder:text-opacity-50 dark:placeholder:text-opacity-50 placeholder:text-primary dark:placeholder:text-light resize-none ${data.className}`}
         onChange={data.onChange}
       />
     </div>
