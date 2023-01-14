@@ -1,3 +1,4 @@
+import axios, { AxiosProgressEvent } from "axios";
 import { ContactFormData } from "./types";
 
 const isEmail = (email: string | undefined) => {
@@ -44,5 +45,45 @@ export const validateContactForm = (data: ContactFormData | undefined) => {
   } catch (err) {
     console.error(err);
     return false;
+  }
+};
+
+export const downloadFile = async (
+  url: string,
+  onDownloadProgress?: (progress: number) => void
+) => {
+  const res = await axios({
+    url,
+    method: "GET",
+    responseType: "blob",
+    onDownloadProgress: (progressEvent: AxiosProgressEvent) => {
+      setTimeout(() => {
+        const total = progressEvent.total;
+        const current = progressEvent.loaded;
+
+        if (!total) {
+          return;
+        }
+
+        const percentCompleted = Math.floor((current / total) * 100);
+        onDownloadProgress?.(percentCompleted);
+      }, 500);
+    },
+  });
+
+  if (res) {
+    const href = URL.createObjectURL(res.data);
+
+    const link = document.createElement("a");
+    link.href = href;
+
+    const filename = url.substring(url.lastIndexOf("/") + 1);
+
+    link.setAttribute("download", filename);
+    document.body.appendChild(link);
+    link.click();
+
+    document.body.removeChild(link);
+    URL.revokeObjectURL(href);
   }
 };

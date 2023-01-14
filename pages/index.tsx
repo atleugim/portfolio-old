@@ -1,6 +1,6 @@
 import Contact from "@/components/home/contact/Contact";
 import Projects from "@/components/home/projects/Projects";
-import Welcome from "@/components/home/Welcome";
+import Welcome from "@/components/home/welcome/Welcome";
 import MainLayout from "@/layouts/MainLayout";
 
 const Home = () => {

@@ -7,8 +7,9 @@ import {
   TAILWIND_URL,
 } from "@/utils/vars";
 import { useTranslation } from "react-i18next";
-import ExternalLink from "../shared/ExternalLink";
-import ImageWithFallback from "../shared/ImageWithFallback";
+import ExternalLink from "../../shared/ExternalLink";
+import ImageWithFallback from "../../shared/ImageWithFallback";
+import DownloadCV from "./DownloadCV";
 
 const Welcome = () => {
   const { t } = useTranslation();
@@ -43,6 +44,7 @@ const Welcome = () => {
           <ExternalLink href={FLUTTER_URL} name="Flutter" /> {andConnector}{" "}
           <ExternalLink href={DART_URL} name="Dart" />.
         </p>
+        <DownloadCV />
       </div>
       <div className="flex items-center justify-center w-full h-full col-span-2 max-h-80 md:w-4/12">
         <ImageWithFallback
