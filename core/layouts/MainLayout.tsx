@@ -1,6 +1,6 @@
 import MediaContact from "@/components/shared/MediaContact";
-import Navbar from "@/components/shared/Navbar/Navbar";
-import Sidebar from "@/components/shared/Sidebar/Sidebar";
+import Navbar from "@/components/shared/Navbar";
+import Sidebar from "@/components/shared/Sidebar";
 import Wrapper from "@/components/shared/Wrapper";
 import { Component } from "@/utils/types";
 import { IBM_Plex_Sans } from "@next/font/google";
