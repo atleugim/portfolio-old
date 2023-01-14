@@ -1,4 +1,4 @@
-import projects from "@/utils/projects.json";
+import projects from "public/assets/json/projects.json";
 import { useTranslation } from "react-i18next";
 import Project from "./Project";
 

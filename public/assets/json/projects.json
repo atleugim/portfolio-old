@@ -1,5 +1,24 @@
 [
   {
+    "name": "atleugim-hooks",
+    "description": {
+      "en": "Some of my favorite React hooks I use in my projects.",
+      "es": "Algunos de mis React hooks favoritos que utilizo en mis proyectos."
+    },
+    "image": "/assets/images/projects/atleugim-hooks.webp",
+    "link": "https://atleugim-hooks.vercel.app/",
+    "technologies": [
+      {
+        "id": "react.js",
+        "name": "React.js"
+      },
+      {
+        "id": "typescript",
+        "name": "TypeScript"
+      }
+    ]
+  },
+  {
     "name": "Hi Beauty",
     "description": {
       "en": "A website to purchase a subscription box and/or beauty products",
@@ -28,31 +47,8 @@
       "en": "A platform to buy and view online courses on digital marketing focused on small entrepreneurs.",
       "es": "Una plataforma para comprar y ver cursos online de marketing digital enfocados a pequeños emprendedores."
     },
-    "image": "/assets/images/projects/edu.webp",
+    "image": "/assets/images/projects/startupslab.webp",
     "link": "https://startupslab.co/",
-    "technologies": [
-      {
-        "id": "react.js",
-        "name": "React.js"
-      },
-      {
-        "id": "next.js",
-        "name": "Next.js"
-      },
-      {
-        "id": "tailwindcss",
-        "name": "Tailwind CSS"
-      }
-    ]
-  },
-  {
-    "name": "Neutro",
-    "description": {
-      "en": "A real estate project builder landing page, showcase and sales contact information.",
-      "es": "Una página de aterrizaje, vitrina y datos de contacto de ventas para un proyecto inmobiliario."
-    },
-    "image": "/assets/images/projects/neutro.webp",
-    "link": "https://wearered.co/neutro",
     "technologies": [
       {
         "id": "react.js",

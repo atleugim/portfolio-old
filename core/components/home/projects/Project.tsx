@@ -28,9 +28,8 @@ const Project = ({ project, priority }: ProjectProps) => {
           ))}
         </div>
         <Button
-          className="duration-300 bg-glass-light dark:bg-glass-dark hover:bg-light dark:hover:bg-primary"
-          text={viewLabel}
           isNavigation
+          text={viewLabel}
           href={project.link}
           target="_blank"
         />
