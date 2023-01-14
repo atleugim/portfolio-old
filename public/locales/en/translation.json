@@ -21,5 +21,9 @@
   "page.contact.form.name": "Name",
   "page.contact.form.email": "Email",
   "page.contact.form.message": "What's on your mind?",
-  "page.contact.form.button": "Send message"
+  "page.contact.form.button": "Send message",
+  "page.contact.form.required": "This field is required",
+  "page.contact.form.invalid_email": "Invalid email",
+  "page.contact.form.success": "Message sent successfully!",
+  "page.contact.form.error": "Something went wrong!"
 }

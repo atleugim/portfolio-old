@@ -44,15 +44,14 @@ export interface InputType {
   defaultValue?: string | number;
   placeholder?: string;
   className?: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   disabled?: boolean;
-  required?: boolean;
   readOnly?: boolean;
+  error?: FieldError;
+  dot?: boolean;
   autoCapitalize?: "none" | "sentences" | "words" | "characters";
 }
 
 export interface TextAreaType extends InputType {
-  onChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
   rows?: number;
 }
 
@@ -72,9 +71,9 @@ export interface Project {
 }
 
 export interface ContactFormData {
-  name?: string;
-  email?: string;
-  message?: string;
+  name?: string | null;
+  email?: string | null;
+  message?: string | null;
 }
 
 export interface ContactFormResponse {

@@ -1,73 +1,106 @@
 import Button from "@/components/shared/Button";
-import Input from "@/components/shared/Input";
-import TextArea from "@/components/shared/TextArea";
+import Input from "@/components/shared/Inputs/Input";
+import TextArea from "@/components/shared/Inputs/TextArea";
 import useFetch from "@/hooks/useFetch";
-import { validateContactForm } from "@/utils/helpers";
+import { emailPattern } from "@/utils/helpers";
 import { ContactFormData, ContactFormResponse } from "@/utils/types";
-import { useRef, useState } from "react";
-import toast from "react-hot-toast";
+import { useId } from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "react-hot-toast";
 import { useTranslation } from "react-i18next";
 
 const ContactForm = () => {
+  const toastId = useId();
+
   const { t } = useTranslation();
   const nameLabel = t("page.contact.form.name");
   const emailLabel = t("page.contact.form.email");
   const messageLabel = t("page.contact.form.message");
   const buttonLabel = t("page.contact.form.button");
+  const requiredLabel = t("page.contact.form.required");
+  const invalidEmailLabel = t("page.contact.form.invalid_email");
+  const successLabel = t("page.contact.form.success");
+  const errorLabel = t("page.contact.form.error");
 
-  const formRef = useRef<HTMLFormElement>(null);
-  const [form, setForm] = useState<ContactFormData>();
+  const {
+    register,
+    handleSubmit,
+    setError,
+    reset,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      name: null,
+      email: null,
+      message: null,
+    } satisfies ContactFormData,
+  });
 
   const { runFetch, isLoading } = useFetch<ContactFormResponse>(
     "/api/contact",
     "POST"
   );
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (validateContactForm(form)) {
-      const data = await runFetch(form);
-
-      if (data?.success) {
-        toast.success("Message sent successfully!");
-        formRef.current?.reset();
-      } else {
-        toast.error("Something went wrong!");
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      if (!data.email?.match(emailPattern)) {
+        setError("email", {
+          type: "pattern",
+          message: invalidEmailLabel,
+        });
+        return;
       }
-    } else {
-      toast.error("Please check out the form!");
+
+      const res = await runFetch(data);
+
+      if (!res?.success) {
+        throw new Error(res?.message);
+      }
+
+      toast.success(successLabel, {
+        id: toastId,
+      });
+
+      reset();
+    } catch (err) {
+      console.error(err);
+      return toast.error(errorLabel, {
+        id: toastId,
+      });
     }
   };
 
   return (
-    <form ref={formRef} className="w-full" onSubmit={handleSubmit}>
+    <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
       <fieldset className="flex flex-col w-full space-y-5" disabled={isLoading}>
         <Input
           id="name"
           type="text"
-          required
-          name="name"
           autoCapitalize="words"
           placeholder={nameLabel}
-          onChange={(e) => setForm({ ...form, name: e.target.value })}
+          error={errors.name}
+          {...register("name", {
+            required: requiredLabel,
+          })}
         />
         <Input
           id="email"
           type="email"
-          required
-          name="email"
           autoCapitalize="none"
           placeholder={emailLabel}
-          onChange={(e) => setForm({ ...form, email: e.target.value })}
+          error={errors.email}
+          {...register("email", {
+            required: requiredLabel,
+          })}
         />
         <TextArea
           id="message"
-          required
-          name="message"
           autoCapitalize="sentences"
           placeholder={messageLabel}
-          onChange={(e) => setForm({ ...form, message: e.target.value })}
+          error={errors.message}
+          {...register("message", {
+            required: requiredLabel,
+          })}
         />
         <Button type="submit" text={buttonLabel} isLoading={isLoading} />
       </fieldset>
