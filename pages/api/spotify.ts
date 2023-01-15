@@ -48,7 +48,7 @@ const getNowPlaying = async (_: NextApiRequest, res: NextApiResponse) => {
 
     if (data) {
       res.statusCode = 200;
-      res.end(
+      return res.end(
         JSON.stringify({
           success: true,
           data: data,

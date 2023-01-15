@@ -36,7 +36,7 @@ const sendContact = async (req: NextApiRequest, res: NextApiResponse) => {
 
     if (data) {
       res.statusCode = 200;
-      res.end(
+      return res.end(
         JSON.stringify({
           success: true,
           message: "Message sent successfully",
@@ -47,7 +47,7 @@ const sendContact = async (req: NextApiRequest, res: NextApiResponse) => {
     throw new Error("Message not sent");
   } catch (err) {
     res.statusCode = 500;
-    res.end(
+    return res.end(
       JSON.stringify({
         success: false,
         message: err,
