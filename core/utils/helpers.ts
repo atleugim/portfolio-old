@@ -42,3 +42,11 @@ export const downloadFile = async (
     URL.revokeObjectURL(href);
   }
 };
+
+export const joinArray = (array: Array<any>, locale = "en") => {
+  const formatter = new Intl.ListFormat(locale, {
+    style: "long",
+    type: "conjunction",
+  });
+  return formatter.format(array);
+};

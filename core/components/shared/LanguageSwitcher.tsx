@@ -17,7 +17,7 @@ const LanguageSwitcher = () => {
   return (
     <button
       onClick={handleLanguageChange}
-      className="fixed w-12 h-12 text-xl font-bold uppercase duration-300 transform rounded-full aspect-square dark:bg-light dark:bg-opacity-10 bg-primary bg-opacity-10 backdrop-blur-md bottom-4 right-4 animate-fadeIn"
+      className="fixed w-12 h-12 font-mono text-xl font-bold uppercase duration-300 transform rounded-full aspect-square dark:bg-light dark:bg-opacity-10 bg-primary bg-opacity-10 backdrop-blur-md bottom-4 right-4 animate-fadeIn"
     >
       {value}
     </button>

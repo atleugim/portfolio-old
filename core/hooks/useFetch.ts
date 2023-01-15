@@ -15,7 +15,7 @@ const useFetch = <T>(
 ) => {
   const [fetchData, setFetchData] = useState<FetchState>();
 
-  const runFetch = async (body: any) => {
+  const runFetch = async (body?: Object) => {
     try {
       setFetchData({ isLoading: true, isError: false });
 

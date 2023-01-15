@@ -1,0 +1,29 @@
+{
+  "page.meta.title": "Miguel Vega - Software Developer",
+  "page.meta.description": "I'm a software developer based in Colombia, specialized in web and mobile development. Self-taught developer building personal digital experiences.",
+
+  "page.navbar.home": "Home",
+  "page.navbar.projects": "Projects",
+  "page.navbar.contact": "Contact",
+
+  "page.home.title": "<span class='text-secondary'>Hi,</span>&nbsp;my name is",
+  "page.home.description.1": "I'm a software developer based in Colombia specialized in web and mobile development. Self-taught developer building personal digital experiences.",
+  "page.home.description.2": "+3 years of experience in software development, focused on",
+  "page.home.description.3": "with technologies like",
+  "page.home.and": "and",
+  "page.home.with": "with",
+  "page.home.download_cv": "Download CV",
+
+  "page.projects.title": "Some&nbsp;<span class='text-secondary'>things</span>&nbsp;I've built",
+  "page.projects.view_btn": "View project",
+
+  "page.contact.title": "Send me a&nbsp;<span class='text-secondary'>message</span>",
+  "page.contact.form.name": "Name",
+  "page.contact.form.email": "Email",
+  "page.contact.form.message": "What's on your mind?",
+  "page.contact.form.button": "Send message",
+  "page.contact.form.required": "This field is required",
+  "page.contact.form.invalid_email": "Invalid email",
+  "page.contact.form.success": "Message sent successfully!",
+  "page.contact.form.error": "Something went wrong!"
+}

@@ -30,28 +30,30 @@ const send = async (data: ContactFormData) => {
   return transporter.sendMail(mailData);
 };
 
-export default function sendContact(req: NextApiRequest, res: NextApiResponse) {
-  return new Promise((resolve, reject) => {
-    send(req.body)
-      .then((_) => {
-        res.statusCode = 200;
-        res.end(
-          JSON.stringify({
-            success: true,
-            message: "Message sent successfully",
-          })
-        );
-        resolve(res);
+const sendContact = async (req: NextApiRequest, res: NextApiResponse) => {
+  try {
+    const data = await send(req.body);
+
+    if (data) {
+      res.statusCode = 200;
+      res.end(
+        JSON.stringify({
+          success: true,
+          message: "Message sent successfully",
+        })
+      );
+    }
+
+    throw new Error("Message not sent");
+  } catch (err) {
+    res.statusCode = 500;
+    res.end(
+      JSON.stringify({
+        success: false,
+        message: err,
       })
-      .catch((err) => {
-        res.statusCode = 500;
-        res.end(
-          JSON.stringify({
-            success: false,
-            message: err,
-          })
-        );
-        reject(err);
-      });
-  });
-}
+    );
+  }
+};
+
+export default sendContact;

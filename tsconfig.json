@@ -24,7 +24,8 @@
       "@/repositories/*": ["core/repositories/*"],
       "@/utils/*": ["core/utils/*"],
       "@/pages/*": ["pages/*"],
-      "@/locales/*": ["locales/*"]
+      "@/locales/*": ["locales/*"],
+      "@/lib/*": ["core/lib/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
