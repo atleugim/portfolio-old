@@ -67,7 +67,6 @@ const ContactForm = () => {
 
   useEffect(() => {
     if (i18n.language) {
-      console.log(i18n.language);
       clearErrors();
     }
   }, [clearErrors, i18n.language]);
