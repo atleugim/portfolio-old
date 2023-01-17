@@ -3,21 +3,20 @@ import { joinArray } from "@/utils/helpers";
 import { SpotifyNowPlaying } from "@/utils/types";
 import ExternalLink from "../shared/ExternalLink";
 import SpotifyIcon from "../shared/Icons/Spotify";
-import Wrapper from "../shared/Wrapper";
 
 type SpotifyProps = {
   data?: SpotifyNowPlaying;
 };
 
 const Spotify = () => {
-  const { imPlaying, isLoading } = useSpotify();
+  const { imPlaying: spotify, isLoading } = useSpotify();
 
-  if (isLoading || !imPlaying) return null;
+  if (isLoading) return null;
 
   return (
-    <Wrapper className="justify-center font-mono text-sm">
-      {imPlaying?.is_playing ? <Playing data={imPlaying} /> : <NotPlaying />}
-    </Wrapper>
+    <div className="justify-center font-mono text-sm flex">
+      {spotify?.is_playing ? <Playing data={spotify} /> : <NotPlaying />}
+    </div>
   );
 };
 
@@ -25,7 +24,7 @@ export default Spotify;
 
 const Playing = ({ data }: SpotifyProps) => {
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex justify-center space-x-2 w-full text-center">
       <SpotifyIcon />{" "}
       <ExternalLink
         href={data!.item.external_urls.spotify}
@@ -39,7 +38,7 @@ const Playing = ({ data }: SpotifyProps) => {
 
 const NotPlaying = () => {
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex justify-center space-x-2 w-full text-center">
       <SpotifyIcon /> <span>Not playing</span>
     </div>
   );

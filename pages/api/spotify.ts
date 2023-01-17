@@ -41,6 +41,7 @@ const getNowPlaying = async (_: NextApiRequest, res: NextApiResponse) => {
     const response = await fetch(NOW_PLAYING_ENDPOINT, {
       headers: {
         Authorization: `Bearer ${access_token}`,
+        accept: "application/json",
       },
     });
 

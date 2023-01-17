@@ -15,7 +15,10 @@ const useSpotify = () => {
 
       if (res?.success) {
         setImPlaying(res.data);
+        return;
       }
+
+      setImPlaying(undefined);
     };
 
     fetchNowPlaying();

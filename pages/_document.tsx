@@ -1,3 +1,4 @@
+import { IS_DEV } from "@/utils/vars";
 import { Head, Html, Main, NextScript } from "next/document";
 
 const Document = () => {
@@ -44,11 +45,7 @@ const Document = () => {
 
         <link rel="canonical" href="https://atleugim.vercel.app/" />
       </Head>
-      <body
-        className={`${
-          process.env.IS_DEBUG ? "debug-screens" : ""
-        } overflow-x-hidden`}
-      >
+      <body className={`${IS_DEV ? "debug-screens" : ""} overflow-x-hidden`}>
         <Main />
         <NextScript />
       </body>
