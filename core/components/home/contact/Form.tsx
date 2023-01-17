@@ -4,12 +4,14 @@ import TextArea from "@/components/shared/Inputs/TextArea";
 import useFetch from "@/hooks/useFetch";
 import { emailPattern } from "@/utils/helpers";
 import { ContactFormData, ContactFormResponse } from "@/utils/types";
-import { useId } from "react";
+import { useSyncLanguage } from "ni18n";
+import { useEffect, useId } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { useTranslation } from "react-i18next";
 
 const ContactForm = () => {
+  const { i18n } = useSyncLanguage();
   const toastId = useId();
 
   const { t } = useTranslation();
@@ -23,10 +25,11 @@ const ContactForm = () => {
   const errorLabel = t("page.contact.form.error");
 
   const {
-    register,
-    handleSubmit,
-    setError,
     reset,
+    register,
+    setError,
+    clearErrors,
+    handleSubmit,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -43,14 +46,6 @@ const ContactForm = () => {
 
   const onSubmit = async (data: ContactFormData) => {
     try {
-      if (!data.email?.match(emailPattern)) {
-        setError("email", {
-          type: "pattern",
-          message: invalidEmailLabel,
-        });
-        return;
-      }
-
       const res = await runFetch(data);
 
       if (!res?.success) {
@@ -69,6 +64,13 @@ const ContactForm = () => {
       });
     }
   };
+
+  useEffect(() => {
+    if (i18n.language) {
+      console.log(i18n.language);
+      clearErrors();
+    }
+  }, [clearErrors, i18n.language]);
 
   return (
     <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
@@ -91,6 +93,10 @@ const ContactForm = () => {
           error={errors.email}
           {...register("email", {
             required: requiredLabel,
+            pattern: {
+              value: emailPattern,
+              message: invalidEmailLabel,
+            },
           })}
         />
         <TextArea

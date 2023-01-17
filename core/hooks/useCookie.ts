@@ -1,7 +1,7 @@
 import Cookies from "js-cookie";
 import { useCallback, useEffect, useState } from "react";
 
-const useCookie = (name: string, defaultValue: string | undefined) => {
+const useCookie = (name: string, defaultValue?: string | undefined) => {
   const [value, setValue] = useState<string | undefined>(() => {
     const cookie = Cookies.get(name)?.trim();
 
