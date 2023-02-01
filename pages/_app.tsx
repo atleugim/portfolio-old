@@ -2,6 +2,7 @@ import MainProvider from "@/providers/main";
 import type { AppProps } from "next/app";
 import { appWithI18Next } from "ni18n";
 import { ni18nConfig } from "../ni18n.config";
+
 import "../styles/globals.css";
 
 const App = ({ Component, pageProps }: AppProps) => {
