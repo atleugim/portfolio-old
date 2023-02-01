@@ -1,4 +1,4 @@
-import { Icon } from "@/utils/types";
+import { Icon } from "@/core/utils/types";
 
 const Close = ({ size = "1.5em", className = "" }: Icon) => (
   <svg

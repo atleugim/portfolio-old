@@ -1,5 +1,5 @@
-import { Component, SidebarContextType } from "@/utils/types";
 import { createContext, useState } from "react";
+import { Component, SidebarContextType } from "../utils/types";
 
 export const SidebarContext = createContext<SidebarContextType | null>(null);
 

@@ -1,5 +1,5 @@
-import useSidebar from "@/hooks/useSidebar";
-import { Language, Route } from "@/utils/types";
+import useSidebar from "@/core/hooks/useSidebar";
+import { Language, Route } from "@/core/utils/types";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
@@ -22,7 +22,7 @@ const NavbarLink = ({ link, index, className = "text-sm" }: NavbarLink) => {
   return (
     <li
       onClick={handleOnClick}
-      className={`flex py-1 space-x-1 list-none rounded-md cursor-pointer ${className}`}
+      className={`flex cursor-pointer list-none space-x-1 rounded-md py-1 ${className}`}
     >
       <Link href={link.href} passHref>
         <span className="text-secondary">0{index + 1}.</span>

@@ -1,4 +1,4 @@
-import { IS_DEV } from "@/utils/vars";
+import { IS_DEV } from "@/core/utils/vars";
 import { Head, Html, Main, NextScript } from "next/document";
 
 const Document = () => {

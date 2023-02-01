@@ -1,4 +1,4 @@
-import MainProvider from "@/providers/main";
+import MainProvider from "@/core/providers/main";
 import type { AppProps } from "next/app";
 import { appWithI18Next } from "ni18n";
 import { ni18nConfig } from "../../ni18n.config";

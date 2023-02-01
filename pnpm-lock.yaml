@@ -7,6 +7,7 @@ specifiers:
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
   '@vercel/analytics': ^0.1.8
+  atleugim-hooks: ^0.1.0
   autoprefixer: ^10.4.13
   axios: ^1.3.0
   eslint: 8.33.0
@@ -31,6 +32,7 @@ specifiers:
 dependencies:
   '@next/font': 13.1.6
   '@vercel/analytics': 0.1.8_react@18.2.0
+  atleugim-hooks: 0.1.0
   axios: 1.3.0
   i18next: 22.4.9
   js-cookie: 3.0.1
@@ -509,6 +511,12 @@ packages:
 
   /asynckit/0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
+    dev: false
+
+  /atleugim-hooks/0.1.0:
+    resolution: {integrity: sha512-yHqiGUynKn8I7q6AAX9GEnSUxr8GnX5NnZ9yYM+/8SOhbRnUpl6Hrjfk4CYa0bRENtfM3YVumd4RHp1DBsB+Xg==}
+    dependencies:
+      js-cookie: 3.0.1
     dev: false
 
   /autoprefixer/10.4.13_postcss@8.4.21:

@@ -5,7 +5,7 @@ import {
   NEXT_JS_URL,
   REACT_URL,
   TAILWIND_URL,
-} from "@/utils/vars";
+} from "@/core/utils/vars";
 import { useTranslation } from "react-i18next";
 import ExternalLink from "../../shared/ExternalLink";
 import ImageWithFallback from "../../shared/ImageWithFallback";
@@ -22,8 +22,8 @@ const Welcome = () => {
   const withConnector = t("page.home.with");
 
   return (
-    <section className="flex flex-col w-full space-y-10 md:flex-row md:space-x-5 md:space-y-0">
-      <div className="flex flex-col items-start justify-start w-full col-span-3 space-y-4 font-light md:w-8/12">
+    <section className="flex w-full flex-col space-y-10 md:flex-row md:space-x-5 md:space-y-0">
+      <div className="col-span-3 flex w-full flex-col items-start justify-start space-y-4 font-light md:w-8/12">
         <div className="flex flex-col items-start">
           <p
             className="flex space-x-1 text-lg font-medium"
@@ -46,7 +46,7 @@ const Welcome = () => {
         </p>
         <DownloadCV />
       </div>
-      <div className="flex items-center justify-center w-full h-full col-span-2 max-h-80 md:w-4/12">
+      <div className="col-span-2 flex h-full max-h-80 w-full items-center justify-center md:w-4/12">
         <ImageWithFallback
           width={300}
           height={300}

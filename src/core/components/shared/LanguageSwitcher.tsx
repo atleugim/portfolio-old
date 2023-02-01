@@ -1,4 +1,4 @@
-import useCookie from "@/hooks/useCookie";
+import { useCookie } from "atleugim-hooks";
 import { useSyncLanguage } from "ni18n";
 import { useEffect } from "react";
 
@@ -17,7 +17,7 @@ const LanguageSwitcher = () => {
   return (
     <button
       onClick={handleLanguageChange}
-      className="fixed w-12 h-12 font-mono text-xl font-bold uppercase duration-300 transform rounded-full aspect-square dark:bg-light dark:bg-opacity-10 bg-primary bg-opacity-10 backdrop-blur-md bottom-4 right-4 animate-fadeIn"
+      className="fixed bottom-4 right-4 aspect-square h-12 w-12 transform animate-fadeIn rounded-full bg-primary bg-opacity-10 font-mono text-xl font-bold uppercase backdrop-blur-md duration-300 dark:bg-light dark:bg-opacity-10"
     >
       {value}
     </button>

@@ -1,6 +1,6 @@
-import useLockScroll from "@/hooks/useLockScroll";
-import useSidebar from "@/hooks/useSidebar";
-import { Routes } from "@/utils/routes";
+import useSidebar from "@/core/hooks/useSidebar";
+import { Routes } from "@/core/utils/routes";
+import { useLockScroll } from "atleugim-hooks";
 import { useEffect } from "react";
 import GlassContainer from "../GlassContainer";
 import NavbarLink from "../Navbar/NavLink";
@@ -22,12 +22,12 @@ const Sidebar = () => {
 
   return (
     <GlassContainer
-      className={`flex sm:hidden w-screen h-screen justify-center items-center bg-light bg-opacity-30 dark:bg-opacity-30 dark:bg-primary fixed top-0 left-0 z-40 backdrop-blur-2xl transform duration-300 ${
+      className={`fixed top-0 left-0 z-40 flex h-screen w-screen transform items-center justify-center bg-light bg-opacity-30 backdrop-blur-2xl duration-300 dark:bg-primary dark:bg-opacity-30 sm:hidden ${
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}
     >
       <nav className="flex items-center justify-center">
-        <ul className="flex flex-col items-center p-10 space-y-4">
+        <ul className="flex flex-col items-center space-y-4 p-10">
           {Routes.getAll().map((link, index) => (
             <NavbarLink
               key={index}

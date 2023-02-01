@@ -1,4 +1,4 @@
-import { Icon } from "@/utils/types";
+import { Icon } from "@/core/utils/types";
 
 const Menu = ({ size = "1em", className = "" }: Icon) => (
   <svg

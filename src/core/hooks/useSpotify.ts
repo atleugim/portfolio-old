@@ -1,5 +1,5 @@
-import { SpotifyApiResponse, SpotifyNowPlaying } from "@/utils/types";
 import { useEffect, useState } from "react";
+import { SpotifyApiResponse, SpotifyNowPlaying } from "../utils/types";
 import useFetch from "./useFetch";
 
 const useSpotify = () => {

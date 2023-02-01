@@ -1,4 +1,4 @@
-import useDarkMode from "@/hooks/useDarkMode";
+import useDarkMode from "@/core/hooks/useDarkMode";
 import CurrentModeIcon from "./CurrentModeIcon";
 
 const ToggleDarkMode = () => {
@@ -6,7 +6,7 @@ const ToggleDarkMode = () => {
 
   return (
     <button
-      className="p-2 duration-300 transform rounded-full aspect-square dark:bg-light dark:bg-opacity-10 bg-primary bg-opacity-10 hover:rotate-90 backdrop-blur-md"
+      className="aspect-square transform rounded-full bg-primary bg-opacity-10 p-2 backdrop-blur-md duration-300 hover:rotate-90 dark:bg-light dark:bg-opacity-10"
       onClick={() => setTheme(colorTheme)}
       aria-label="Toggle dark mode"
     >

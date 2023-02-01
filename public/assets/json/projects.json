@@ -1,5 +1,32 @@
 [
   {
+    "name": "next-tail",
+    "description": {
+      "en": "Next.js + TailwindCSS project generator with some configurations and plugins, ready to use. (JS or TS)",
+      "es": "Generador de proyectos Next.js + TailwindCSS con algunas configuraciones y plugins, listo para ejecutar. (JS o TS)"
+    },
+    "image": "/assets/images/projects/next-tail.webp",
+    "link": "https://www.npmjs.com/package/next-tail",
+    "technologies": [
+      {
+        "id": "react.js",
+        "name": "React.js"
+      },
+      {
+        "id": "next.js",
+        "name": "Next.js"
+      },
+      {
+        "id": "tailwindcss",
+        "name": "Tailwind CSS"
+      },
+      {
+        "id": "typescript",
+        "name": "TypeScript"
+      }
+    ]
+  },
+  {
     "name": "atleugim-hooks",
     "description": {
       "en": "Some of my favorite React hooks I use in my projects.",
@@ -9,8 +36,8 @@
     "link": "https://atleugim-hooks.vercel.app/",
     "technologies": [
       {
-        "id": "react.js",
-        "name": "React.js"
+        "id": "astro.js",
+        "name": "Astro.js"
       },
       {
         "id": "typescript",

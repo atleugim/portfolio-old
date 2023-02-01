@@ -1,4 +1,4 @@
-import { Button } from "@/utils/types";
+import { Button } from "@/core/utils/types";
 import Link from "next/link";
 import Spinner from "./Icons/Spinner";
 
@@ -16,7 +16,7 @@ const Button = ({
   isLoading = false,
 }: Button) => {
   const child = (
-    <div className="flex items-center justify-center w-full space-x-4">
+    <div className="flex w-full items-center justify-center space-x-4">
       {childrenPosition === "start" && children}
       <span className="link-underline">{text}</span>
       {childrenPosition === "end" && children}
@@ -24,8 +24,8 @@ const Button = ({
   );
   return (
     <div
-      className={`flex items-center justify-center btn ${
-        disabled ? "opacity-60 cursor-not-allowed" : "opacity-100"
+      className={`btn flex items-center justify-center ${
+        disabled ? "cursor-not-allowed opacity-60" : "opacity-100"
       }`}
     >
       {isNavigation ? (
@@ -35,7 +35,7 @@ const Button = ({
           target={target}
           className={`${className} ${
             isLoading ? "py-1" : "py-2"
-          } px-2 rounded-md text-xs font-bold uppercase hover:bg-opacity-90 duration-300 border dark:border-gray-200 border-primary`}
+          } rounded-md border border-primary px-2 text-xs font-bold uppercase duration-300 hover:bg-opacity-90 dark:border-gray-200`}
         >
           {isLoading ? (
             <Spinner className="text-primary dark:text-light" />
@@ -47,7 +47,7 @@ const Button = ({
         <button
           className={`${className} ${
             isLoading ? "py-1" : "py-2"
-          } px-2 rounded-md text-xs font-bold uppercase hover:bg-opacity-90 duration-300 border dark:border-gray-200 border-primary`}
+          } rounded-md border border-primary px-2 text-xs font-bold uppercase duration-300 hover:bg-opacity-90 dark:border-gray-200`}
           onClick={onClick}
           type={type}
           disabled={disabled}

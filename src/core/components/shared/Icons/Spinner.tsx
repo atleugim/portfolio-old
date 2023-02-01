@@ -1,4 +1,4 @@
-import { Icon } from "@/utils/types";
+import { Icon } from "@/core/utils/types";
 
 const Spinner = ({ size = "2em", className = "" }: Icon) => (
   <svg
@@ -8,7 +8,7 @@ const Spinner = ({ size = "2em", className = "" }: Icon) => (
     viewBox="0 0 24 24"
     height={size}
     width={size}
-    className={`${className} animate-spin w-full`}
+    className={`${className} w-full animate-spin`}
     xmlns="http://www.w3.org/2000/svg"
   >
     <path

@@ -1,4 +1,4 @@
-import { Icon } from "@/utils/types";
+import { Icon } from "@/core/utils/types";
 
 const Spotify = ({ size = "1em", className = "" }: Icon) => (
   <svg

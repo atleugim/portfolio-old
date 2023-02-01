@@ -1,7 +1,7 @@
-import Button from "@/components/shared/Button";
-import { downloadFile } from "@/utils/helpers";
+import { downloadFile } from "@/core/utils/helpers";
 import { useReducer } from "react";
 import { useTranslation } from "react-i18next";
+import Button from "../../shared/Button";
 
 interface DownloadState {
   downloading: boolean;

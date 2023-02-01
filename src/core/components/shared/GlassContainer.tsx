@@ -1,9 +1,9 @@
-import { Component } from "@/utils/types";
+import { Component } from "@/core/utils/types";
 
 const GlassContainer = ({ children, className = "" }: Component) => {
   return (
     <div
-      className={`backdrop-blur-md w-full bg-opacity-75 dark:bg-opacity-75 duration-300 ${className}`}
+      className={`w-full bg-opacity-75 backdrop-blur-md duration-300 dark:bg-opacity-75 ${className}`}
     >
       {children}
     </div>

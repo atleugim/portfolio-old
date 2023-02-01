@@ -1,4 +1,4 @@
-import { ContactFormData } from "@/utils/types";
+import { ContactFormData } from "@/core/utils/types";
 import { NextApiRequest, NextApiResponse } from "next";
 
 const setupNodemailer = () => {

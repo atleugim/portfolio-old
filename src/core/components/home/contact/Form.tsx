@@ -1,14 +1,14 @@
-import Button from "@/components/shared/Button";
-import Input from "@/components/shared/Inputs/Input";
-import TextArea from "@/components/shared/Inputs/TextArea";
-import useFetch from "@/hooks/useFetch";
-import { emailPattern } from "@/utils/helpers";
-import { ContactFormData, ContactFormResponse } from "@/utils/types";
+import useFetch from "@/core/hooks/useFetch";
+import { emailPattern } from "@/core/utils/helpers";
+import { ContactFormData, ContactFormResponse } from "@/core/utils/types";
 import { useSyncLanguage } from "ni18n";
 import { useEffect, useId } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { useTranslation } from "react-i18next";
+import Button from "../../shared/Button";
+import Input from "../../shared/Inputs/Input";
+import TextArea from "../../shared/Inputs/TextArea";
 
 const ContactForm = () => {
   const { i18n } = useSyncLanguage();
@@ -73,7 +73,7 @@ const ContactForm = () => {
 
   return (
     <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
-      <fieldset className="flex flex-col w-full space-y-5" disabled={isLoading}>
+      <fieldset className="flex w-full flex-col space-y-5" disabled={isLoading}>
         <Input
           id="name"
           type="text"

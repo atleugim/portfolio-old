@@ -1,4 +1,4 @@
-import useSidebar from "@/hooks/useSidebar";
+import useSidebar from "@/core/hooks/useSidebar";
 import Menu from "../Icons/Menu";
 
 const SidebarButton = () => {
@@ -6,7 +6,7 @@ const SidebarButton = () => {
 
   return (
     <button
-      className="flex p-2 duration-300 transform rounded-full aspect-square dark:bg-light dark:bg-opacity-10 bg-primary bg-opacity-10 backdrop-blur-md sm:hidden"
+      className="flex aspect-square transform rounded-full bg-primary bg-opacity-10 p-2 backdrop-blur-md duration-300 dark:bg-light dark:bg-opacity-10 sm:hidden"
       onClick={toggle}
       aria-label="Open sidebar"
     >

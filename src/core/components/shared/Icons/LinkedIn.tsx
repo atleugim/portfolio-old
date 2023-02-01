@@ -1,11 +1,11 @@
-import { IconWithLink } from "@/utils/types";
+import { IconWithLink } from "@/core/utils/types";
 
 const LinkedIn = ({ size = "1em", className = "", link }: IconWithLink) => (
   <a
     href={link}
     target="_blank"
     rel="noreferrer"
-    className="duration-300 transform hover:scale-110 hover:-translate-y-1 hover:text-secondary"
+    className="transform duration-300 hover:-translate-y-1 hover:scale-110 hover:text-secondary"
     aria-label="GitHub Link"
   >
     <svg

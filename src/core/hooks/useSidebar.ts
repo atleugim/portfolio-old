@@ -1,6 +1,6 @@
-import { SidebarContext } from "@/providers/sidebar";
-import { SidebarContextType } from "@/utils/types";
 import { useContext } from "react";
+import { SidebarContext } from "../providers/sidebar";
+import { SidebarContextType } from "../utils/types";
 
 const useSidebar = () => {
   const { isOpen, toggle } = useContext(SidebarContext) as SidebarContextType;
