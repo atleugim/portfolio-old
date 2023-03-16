@@ -22,7 +22,7 @@ const Sidebar = () => {
 
   return (
     <GlassContainer
-      className={`fixed top-0 left-0 z-40 flex h-screen w-screen transform items-center justify-center bg-light bg-opacity-30 backdrop-blur-2xl duration-300 dark:bg-primary dark:bg-opacity-30 sm:hidden ${
+      className={`fixed top-0 left-0 z-40 flex h-full w-full transform items-center justify-center bg-light bg-opacity-30 backdrop-blur-2xl duration-300 dark:bg-primary dark:bg-opacity-30 sm:hidden ${
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}
     >

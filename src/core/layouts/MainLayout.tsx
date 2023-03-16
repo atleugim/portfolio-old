@@ -21,12 +21,12 @@ const ibmPlexSans = IBM_Plex_Sans({
 const MainLayout = ({ children, className = "" }: Component) => {
   return (
     <div
-      className={`flex w-screen flex-col bg-light text-primary duration-300 dark:bg-primary dark:text-light ${ibmPlexSans.className}`}
+      className={`flex flex-col bg-light text-primary duration-300 dark:bg-primary dark:text-light ${ibmPlexSans.className}`}
       id="layout"
     >
       <Navbar />
       <Sidebar />
-      <div className="grow overflow-x-hidden py-10 md:py-20">
+      <div className="w-full grow py-10 md:py-20">
         <Wrapper className={`flex-col ${className}`}>{children}</Wrapper>
       </div>
       <MediaContact />
