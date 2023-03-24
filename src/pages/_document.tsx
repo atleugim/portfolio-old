@@ -43,6 +43,11 @@ const Document = () => {
           content="https://atleugim.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fme.webp&w=384&q=75"
         />
 
+        <meta
+          name="google-site-verification"
+          content="ffUJwLXsm0c5eTYPmcXCzYhY0rFFoCqDeDpnWwBNI_0"
+        />
+
         <link rel="canonical" href="https://atleugim.vercel.app/" />
       </Head>
       <body className={`${IS_DEV ? "debug-screens" : ""}`}>
