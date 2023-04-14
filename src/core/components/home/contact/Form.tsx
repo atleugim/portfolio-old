@@ -4,8 +4,8 @@ import { ContactFormData, ContactFormResponse } from "@/core/utils/types";
 import { useSyncLanguage } from "ni18n";
 import { useEffect, useId } from "react";
 import { useForm } from "react-hook-form";
-import { toast } from "react-hot-toast";
 import { useTranslation } from "react-i18next";
+import { toast } from "sonner";
 import Button from "../../shared/Button";
 import Input from "../../shared/Inputs/Input";
 import TextArea from "../../shared/Inputs/TextArea";
@@ -52,16 +52,12 @@ const ContactForm = () => {
         throw new Error(res?.message);
       }
 
-      toast.success(successLabel, {
-        id: toastId,
-      });
+      toast.success(successLabel);
 
       reset();
     } catch (err) {
       console.error(err);
-      return toast.error(errorLabel, {
-        id: toastId,
-      });
+      return toast.error(errorLabel);
     }
   };
 
