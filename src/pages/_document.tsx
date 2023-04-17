@@ -17,7 +17,7 @@ const Document = () => {
         />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://atleugim.vercel.app/" />
+        <meta property="og:url" content="https://atleugim.dev/" />
         <meta property="og:title" content="Miguel Vega - Software Developer" />
         <meta
           property="og:description"
@@ -25,11 +25,11 @@ const Document = () => {
         />
         <meta
           property="og:image"
-          content="https://atleugim.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fme.webp&w=384&q=75"
+          content="https://atleugim.dev/_next/image?url=%2Fassets%2Fimages%2Fme.webp&w=384&q=75"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://atleugim.vercel.app/" />
+        <meta property="twitter:url" content="https://atleugim.dev/" />
         <meta
           property="twitter:title"
           content="Miguel Vega - Software Developer"
@@ -40,15 +40,10 @@ const Document = () => {
         />
         <meta
           property="twitter:image"
-          content="https://atleugim.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fme.webp&w=384&q=75"
+          content="https://atleugim.dev/_next/image?url=%2Fassets%2Fimages%2Fme.webp&w=384&q=75"
         />
 
-        <meta
-          name="google-site-verification"
-          content="ffUJwLXsm0c5eTYPmcXCzYhY0rFFoCqDeDpnWwBNI_0"
-        />
-
-        <link rel="canonical" href="https://atleugim.vercel.app/" />
+        <link rel="canonical" href="https://atleugim.dev/" />
       </Head>
       <body className={`${IS_DEV ? "debug-screens" : ""}`}>
         <Main />
