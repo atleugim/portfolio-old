@@ -4,11 +4,11 @@ import { NextApiRequest, NextApiResponse } from "next";
 const setupNodemailer = () => {
   const nodemailer = require("nodemailer");
   return nodemailer.createTransport({
-    port: 465,
-    host: "smtp.gmail.com",
+    port: process.env.SMTP_PORT,
+    host: process.env.SMTP_HOST,
     auth: {
-      user: process.env.GMAIL_EMAIL,
-      pass: process.env.GMAIL_PASSWORD,
+      user: process.env.HOSTINGER_EMAIL,
+      pass: process.env.HOSTINGER_PASSWORD,
     },
     secure: true,
   });
@@ -16,8 +16,8 @@ const setupNodemailer = () => {
 
 const send = async (data: ContactFormData) => {
   const mailData = {
-    from: data.email,
-    to: process.env.GMAIL_EMAIL,
+    from: process.env.HOSTINGER_ALIAS_EMAIL,
+    to: process.env.HOSTINGER_EMAIL,
     subject: `New portfolio message from ${data.name}`,
     html: `
       <p>Name: ${data.name}</p>
@@ -27,6 +27,15 @@ const send = async (data: ContactFormData) => {
   };
 
   const transporter = setupNodemailer();
+  // verify connection configuration
+  // transporter.verify(function (error: any, success: any) {
+  //   if (error) {
+  //     console.log(error);
+  //   } else {
+  //     console.log("Server is ready to take our messages");
+  //   }
+  // });
+
   return transporter.sendMail(mailData);
 };
 
