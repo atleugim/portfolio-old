@@ -1,51 +1,5 @@
 [
   {
-    "name": "next-tail",
-    "description": {
-      "en": "Next.js + TailwindCSS project generator with some configurations and plugins, ready to use. (JS or TS)",
-      "es": "Generador de proyectos Next.js + TailwindCSS con algunas configuraciones y plugins, listo para ejecutar. (JS o TS)"
-    },
-    "image": "/assets/images/projects/next-tail.webp",
-    "link": "https://www.npmjs.com/package/next-tail",
-    "technologies": [
-      {
-        "id": "react.js",
-        "name": "React.js"
-      },
-      {
-        "id": "next.js",
-        "name": "Next.js"
-      },
-      {
-        "id": "tailwindcss",
-        "name": "Tailwind CSS"
-      },
-      {
-        "id": "typescript",
-        "name": "TypeScript"
-      }
-    ]
-  },
-  {
-    "name": "atleugim-hooks",
-    "description": {
-      "en": "Some of my favorite React hooks I use in my projects.",
-      "es": "Algunos de mis React hooks favoritos que utilizo en mis proyectos."
-    },
-    "image": "/assets/images/projects/atleugim-hooks.webp",
-    "link": "https://atleugim-hooks.vercel.app/",
-    "technologies": [
-      {
-        "id": "astro.js",
-        "name": "Astro.js"
-      },
-      {
-        "id": "typescript",
-        "name": "TypeScript"
-      }
-    ]
-  },
-  {
     "name": "Hi Beauty",
     "description": {
       "en": "A website to purchase a subscription box and/or beauty products",
