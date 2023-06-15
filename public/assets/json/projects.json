@@ -71,7 +71,7 @@
       "es": "Una app multiplataforma para comprar cupones de descuento y canjearlos en diferentes sitios y negocios."
     },
     "image": "/assets/images/projects/take2_app.webp",
-    "link": "https://play.google.com/store/apps/details?id=co.startupslab.take2",
+    "link": "https://play.google.com/store/apps/details?id=dev.take2.app",
     "technologies": [
       {
         "id": "dart",
